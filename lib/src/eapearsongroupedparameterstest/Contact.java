@@ -1,0 +1,97 @@
+
+package eapearsongroupedparameterstest;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+
+/**
+ * <p>Original spec-file type: Contact</p>
+ * 
+ * 
+ */
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@Generated("com.googlecode.jsonschema2pojo")
+@JsonPropertyOrder({
+    "first_name",
+    "last_name",
+    "address"
+})
+public class Contact {
+
+    @JsonProperty("first_name")
+    private String firstName;
+    @JsonProperty("last_name")
+    private String lastName;
+    @JsonProperty("address")
+    private List<Address> address;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @JsonProperty("first_name")
+    public String getFirstName() {
+        return firstName;
+    }
+
+    @JsonProperty("first_name")
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Contact withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    @JsonProperty("last_name")
+    public String getLastName() {
+        return lastName;
+    }
+
+    @JsonProperty("last_name")
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Contact withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    @JsonProperty("address")
+    public List<Address> getAddress() {
+        return address;
+    }
+
+    @JsonProperty("address")
+    public void setAddress(List<Address> address) {
+        this.address = address;
+    }
+
+    public Contact withAddress(List<Address> address) {
+        this.address = address;
+        return this;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperties(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+    @Override
+    public String toString() {
+        return ((((((((("Contact"+" [firstName=")+ firstName)+", lastName=")+ lastName)+", address=")+ address)+", additionalProperties=")+ additionalProperties)+"]");
+    }
+
+}

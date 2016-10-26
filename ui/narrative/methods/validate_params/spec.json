@@ -1,0 +1,155 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "help@kbase.us",
+    "categories": ["active"],
+    "app_type": "app",
+    "widgets": {
+        "input": null,
+        "output": null
+    },
+    "parameters": [ 
+        {
+            "id": "first_name",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "last_name",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "street_address",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "city",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "state",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "country",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        },
+        {
+            "id": "postal_code",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+
+            }
+        }
+    ],
+    "parameter-groups": [
+        {
+            "id": "address",
+            "parameters": [
+                "street_address", "city", "state", "country", "postal_code"
+            ],
+            "optional": true,
+            "allow_multiple": true,
+            "mapping": {},
+            "with_border": true
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearson_GroupedParametersTest",
+            "method": "validate_params",
+            "input_mapping": [
+                {
+                    "input_parameter": "first_name",
+                    "target_property": "data/first_name",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "last_name",
+                    "target_property": "data/last_name",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "address",
+                    "target_property": "data/address",
+                    "target_argument_position": 0
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "parameter_1",
+                    "target_argument_position": 1
+                }
+            ],
+            "output_mapping": [
+                {
+                    "service_method_output_path": [0],
+                    "target_property": "results"
+                },
+                {
+                    "service_method_output_path": [0, "report_name"],
+                    "target_property": "report_name"
+                },
+                {
+                    "service_method_output_path": [0, "report_ref"],
+                    "target_property": "report_ref"
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspaceName"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
