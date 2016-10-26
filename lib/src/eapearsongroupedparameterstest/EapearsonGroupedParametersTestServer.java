@@ -22,8 +22,8 @@ import us.kbase.common.service.UObject;
 public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
-    private static final String gitUrl = "";
-    private static final String gitCommitHash = "";
+    private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
+    private static final String gitCommitHash = "7cf5101cbf43e2ce74e7eda82e9920925f477f66";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER

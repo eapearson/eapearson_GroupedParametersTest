@@ -125,10 +125,6 @@
                 {
                     "narrative_system_variable": "workspace",
                     "target_argument_position": 0
-                },
-                {
-                    "input_parameter": "parameter_1",
-                    "target_argument_position": 1
                 }
             ],
             "output_mapping": [
