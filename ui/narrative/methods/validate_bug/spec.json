@@ -53,7 +53,7 @@
             "advanced": false, 
             "allow_multiple": false,
             "field_type": "dropdown",
-            "text_options": {
+            "dropdown_options": {
                 "options": [
                     {
                         "display": "Easy",
