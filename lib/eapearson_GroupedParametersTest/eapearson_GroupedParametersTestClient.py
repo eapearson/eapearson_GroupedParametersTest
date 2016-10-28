@@ -33,19 +33,59 @@ class eapearson_GroupedParametersTest(object):
             trust_all_ssl_certificates=trust_all_ssl_certificates,
             auth_svc=auth_svc)
 
-    def validate_params(self, contact, context=None):
+    def validate_contact(self, contact, context=None):
         """
         :param contact: instance of type "Contact" -> structure: parameter
            "first_name" of String, parameter "last_name" of String, parameter
-           "address" of list of type "Address" (Insert your typespec
-           information here.) -> structure: parameter "street_address" of
-           String, parameter "city" of String, parameter "state" of String,
-           parameter "postal_code" of String, parameter "country" of String
+           "address" of list of type "Address" (A pure string test of lists
+           of structures (groups)) -> structure: parameter "street_address"
+           of String, parameter "city" of String, parameter "state" of
+           String, parameter "postal_code" of String, parameter "country" of
+           String
         :returns: instance of unspecified object
         """
         return self._client.call_method(
-            'eapearson_GroupedParametersTest.validate_params',
+            'eapearson_GroupedParametersTest.validate_contact',
             [contact], self._service_ver, context)
+
+    def validate_bug(self, bug, context=None):
+        """
+        :param bug: instance of type "Bug" -> structure: parameter "title" of
+           String, parameter "description" of String, parameter "severity" of
+           Long, parameter "log" of list of type "LogEntry" (Throw in floats
+           and ints) -> structure: parameter "time_started" of String,
+           parameter "time_spent" of Double, parameter "comments" of String
+        :returns: instance of unspecified object
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_bug',
+            [bug], self._service_ver, context)
+
+    def validate_checklist(self, checklist, context=None):
+        """
+        :param checklist: instance of type "CarChecklist" -> structure:
+           parameter "date" of type "Date" -> structure: parameter "year" of
+           Long, parameter "month" of Long, parameter "day" of Long,
+           parameter "left_door" of type "InspectionItem" -> structure:
+           parameter "checked" of Long, parameter "condition" of String,
+           parameter "repair_cost" of Double, parameter "right_door" of type
+           "InspectionItem" -> structure: parameter "checked" of Long,
+           parameter "condition" of String, parameter "repair_cost" of
+           Double, parameter "interior" of type "InspectionItem" ->
+           structure: parameter "checked" of Long, parameter "condition" of
+           String, parameter "repair_cost" of Double, parameter "gas" of type
+           "Fluid" (Now some flat groups) -> structure: parameter
+           "max_capacity" of Double, parameter "current_capacity" of Double,
+           parameter "wiper_fluid" of type "Fluid" (Now some flat groups) ->
+           structure: parameter "max_capacity" of Double, parameter
+           "current_capacity" of Double, parameter "coolant" of type "Fluid"
+           (Now some flat groups) -> structure: parameter "max_capacity" of
+           Double, parameter "current_capacity" of Double
+        :returns: instance of unspecified object
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_checklist',
+            [checklist], self._service_ver, context)
 
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',

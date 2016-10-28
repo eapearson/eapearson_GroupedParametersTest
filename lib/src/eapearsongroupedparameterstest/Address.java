@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 /**
  * <p>Original spec-file type: Address</p>
  * <pre>
- * Insert your typespec information here.
+ * A pure string test of lists of structures (groups)
  * </pre>
  * 
  */

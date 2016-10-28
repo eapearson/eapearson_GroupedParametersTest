@@ -23,7 +23,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "7cf5101cbf43e2ce74e7eda82e9920925f477f66";
+    private static final String gitCommitHash = "29f19e52bd82d9bbdd0881cd65bb26afb6dce3c2";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -35,17 +35,47 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     }
 
     /**
-     * <p>Original spec-file function name: validate_params</p>
+     * <p>Original spec-file function name: validate_contact</p>
      * <pre>
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
      * @return   parameter "result" of unspecified object
      */
-    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_params", async=true)
-    public UObject validateParams(Contact contact, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_contact", async=true)
+    public UObject validateContact(Contact contact, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
         UObject returnVal = null;
-        //BEGIN validate_params
-        //END validate_params
+        //BEGIN validate_contact
+        //END validate_contact
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_bug</p>
+     * <pre>
+     * </pre>
+     * @param   bug   instance of type {@link eapearsongroupedparameterstest.Bug Bug}
+     * @return   parameter "result" of unspecified object
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_bug", async=true)
+    public UObject validateBug(Bug bug, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        UObject returnVal = null;
+        //BEGIN validate_bug
+        //END validate_bug
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_checklist</p>
+     * <pre>
+     * </pre>
+     * @param   checklist   instance of type {@link eapearsongroupedparameterstest.CarChecklist CarChecklist}
+     * @return   parameter "result" of unspecified object
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_checklist", async=true)
+    public UObject validateChecklist(CarChecklist checklist, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        UObject returnVal = null;
+        //BEGIN validate_checklist
+        //END validate_checklist
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")

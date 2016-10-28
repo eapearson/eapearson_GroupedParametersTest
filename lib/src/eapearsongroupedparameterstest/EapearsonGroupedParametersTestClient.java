@@ -164,7 +164,7 @@ public class EapearsonGroupedParametersTestClient {
     }
 
     /**
-     * <p>Original spec-file function name: validate_params</p>
+     * <p>Original spec-file function name: validate_contact</p>
      * <pre>
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
@@ -172,11 +172,45 @@ public class EapearsonGroupedParametersTestClient {
      * @throws IOException if an IO exception occurs
      * @throws JsonClientException if a JSON RPC exception occurs
      */
-    public UObject validateParams(Contact contact, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+    public UObject validateContact(Contact contact, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         args.add(contact);
         TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
-        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_params", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_contact", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        return res.get(0);
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_bug</p>
+     * <pre>
+     * </pre>
+     * @param   bug   instance of type {@link eapearsongroupedparameterstest.Bug Bug}
+     * @return   parameter "result" of unspecified object
+     * @throws IOException if an IO exception occurs
+     * @throws JsonClientException if a JSON RPC exception occurs
+     */
+    public UObject validateBug(Bug bug, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+        List<Object> args = new ArrayList<Object>();
+        args.add(bug);
+        TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
+        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        return res.get(0);
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_checklist</p>
+     * <pre>
+     * </pre>
+     * @param   checklist   instance of type {@link eapearsongroupedparameterstest.CarChecklist CarChecklist}
+     * @return   parameter "result" of unspecified object
+     * @throws IOException if an IO exception occurs
+     * @throws JsonClientException if a JSON RPC exception occurs
+     */
+    public UObject validateChecklist(CarChecklist checklist, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+        List<Object> args = new ArrayList<Object>();
+        args.add(checklist);
+        TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
+        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_checklist", args, retType, true, true, jsonRpcContext, this.serviceVersion);
         return res.get(0);
     }
 

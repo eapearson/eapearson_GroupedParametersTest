@@ -12,88 +12,83 @@
     },
     "parameters": [ 
         {
-            "id": "first_name",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
+            "id": "title",
             "default_values": [""],
             "field_type": "text",
             "text_options": {
-
+                "max_length": 100
             }
         },
         {
-            "id": "last_name",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
+            "id": "description",
             "default_values": [""],
-            "field_type": "text",
+            "field_type": "textarea",
             "text_options": {
-
+                "n_rows": 10
+            }
+        },
+        {   
+            "id": "effort",
+            "default_values": [""],
+            "field_type": "int",
+            "text_options": {
+                "min_int": 1,
+                "max_int": 5
             }
         },
         {
-            "id": "street_address",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
+            "id": "severity",
+            "default_values": [""],
+            "field_type": "dropdown",
+            "text_options": {
+                "options": [
+                    {
+                        "display": "Easy",
+                        "value": "easy"
+                    },
+                    {
+                        "display": "Medium",
+                        "value": "medium"
+                    },
+                    {
+                        "display": "Easy",
+                        "value": "hard"
+                    }
+                ]
+            }
+        },
+
+
+
+        {
+            "id": "time_started",
             "default_values": [""],
             "field_type": "text",
             "text_options": {
-
             }
         },
         {
-            "id": "city",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
+            "id": "time_spent",
             "default_values": [""],
             "field_type": "text",
             "text_options": {
-
             }
         },
         {
-            "id": "state",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
+            "id": "comments",
+            "optional": true,
             "default_values": [""],
-            "field_type": "text",
+            "field_type": "textarea",
             "text_options": {
-
-            }
-        },
-        {
-            "id": "postal_code",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text",
-            "text_options": {
-
-            }
-        },
-        {
-            "id": "country",
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text",
-            "text_options": {
-
+                "n_rows": 5
             }
         }
     ],
     "parameter-groups": [
         {
-            "id": "address",
+            "id": "log_entries",
             "parameters": [
-                "street_address", "city", "state", "country", "postal_code"
+                "time_started", "time_spent", "comments"
             ],
             "optional": true,
             "allow_multiple": true,
@@ -108,18 +103,28 @@
             "method": "validate_params",
             "input_mapping": [
                 {
-                    "input_parameter": "first_name",
-                    "target_property": "data/first_name",
+                    "input_parameter": "title",
+                    "target_property": "data/title",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "last_name",
-                    "target_property": "data/last_name",
+                    "input_parameter": "description",
+                    "target_property": "data/description",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "address",
-                    "target_property": "data/address",
+                    "input_parameter": "effort",
+                    "target_property": "data/effort",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "severity",
+                    "target_property": "data/severity",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "log_entries",
+                    "target_property": "data/log_entries",
                     "target_argument_position": 0
                 },
                 {

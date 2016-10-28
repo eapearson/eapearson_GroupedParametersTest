@@ -1,0 +1,75 @@
+#
+# define display information
+#
+name: Validate Grouped Parameters
+
+tooltip: |
+    Validates grouped parameters
+
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    first_name :
+        ui-name : |
+            First name
+        short-hint : |
+            First name
+        long-hint  : |
+            First name
+    last_name :
+        ui-name : |
+            Last name
+        short-hint : |
+            Last name
+        long-hint  : |
+            Last name
+    street_address:
+        ui-name: Street address
+        short-hint: short hint
+        long-hint: long hint
+    city: 
+        ui-name: City
+        short-hint: short hint
+        long-hint: long hint
+    state:
+        ui-name: State
+        short-hint: short hint
+        long-hint: long hint
+    postal_code:
+        ui-name: Postal code
+        short-hint: short hint
+        long-hint: long hint
+    country:
+        ui-name: Country
+        short-hint: short hint
+        long-hint: long hint
+
+parameter-groups:
+    address: 
+        ui-name: Address
+        short-hint: Address
+        long-hint: Address
+
+
+description : |
+    <p>Method to accept and validate grouped parameters</p>
