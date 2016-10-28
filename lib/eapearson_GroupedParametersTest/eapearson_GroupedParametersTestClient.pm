@@ -228,6 +228,7 @@ Bug is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
 	severity has a value which is an int
+	effort has a value which is an int
 	log has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.LogEntry
 LogEntry is a reference to a hash where the following keys are defined:
 	time_started has a value which is a string
@@ -246,6 +247,7 @@ Bug is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
 	severity has a value which is an int
+	effort has a value which is an int
 	log has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.LogEntry
 LogEntry is a reference to a hash where the following keys are defined:
 	time_started has a value which is a string
@@ -649,6 +651,7 @@ a reference to a hash where the following keys are defined:
 title has a value which is a string
 description has a value which is a string
 severity has a value which is an int
+effort has a value which is an int
 log has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.LogEntry
 
 </pre>
@@ -661,6 +664,7 @@ a reference to a hash where the following keys are defined:
 title has a value which is a string
 description has a value which is a string
 severity has a value which is an int
+effort has a value which is an int
 log has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.LogEntry
 
 

@@ -105,25 +105,21 @@
         "service-mapping": {
             "url": "",
             "name": "eapearson_GroupedParametersTest",
-            "method": "validate_params",
+            "method": "validate_contact",
             "input_mapping": [
                 {
                     "input_parameter": "first_name",
-                    "target_property": "data/first_name",
+                    "target_property": "first_name",
                     "target_argument_position": 0
                 },
                 {
                     "input_parameter": "last_name",
-                    "target_property": "data/last_name",
+                    "target_property": "last_name",
                     "target_argument_position": 0
                 },
                 {
                     "input_parameter": "address",
-                    "target_property": "data/address",
-                    "target_argument_position": 0
-                },
-                {
-                    "narrative_system_variable": "workspace",
+                    "target_property": "address",
                     "target_argument_position": 0
                 }
             ],

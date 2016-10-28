@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "title",
     "description",
     "severity",
+    "effort",
     "log"
 })
 public class Bug {
@@ -33,6 +34,8 @@ public class Bug {
     private String description;
     @JsonProperty("severity")
     private Long severity;
+    @JsonProperty("effort")
+    private Long effort;
     @JsonProperty("log")
     private List<LogEntry> log;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -82,6 +85,21 @@ public class Bug {
         return this;
     }
 
+    @JsonProperty("effort")
+    public Long getEffort() {
+        return effort;
+    }
+
+    @JsonProperty("effort")
+    public void setEffort(Long effort) {
+        this.effort = effort;
+    }
+
+    public Bug withEffort(Long effort) {
+        this.effort = effort;
+        return this;
+    }
+
     @JsonProperty("log")
     public List<LogEntry> getLog() {
         return log;
@@ -109,7 +127,7 @@ public class Bug {
 
     @Override
     public String toString() {
-        return ((((((((((("Bug"+" [title=")+ title)+", description=")+ description)+", severity=")+ severity)+", log=")+ log)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((("Bug"+" [title=")+ title)+", description=")+ description)+", severity=")+ severity)+", effort=")+ effort)+", log=")+ log)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

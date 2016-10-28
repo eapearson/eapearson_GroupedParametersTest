@@ -153,30 +153,30 @@
         "service-mapping": {
             "url": "",
             "name": "eapearson_GroupedParametersTest",
-            "method": "validate_params",
+            "method": "validate_bug",
             "input_mapping": [
                 {
                     "input_parameter": "title",
-                    "target_property": "data/title",
+                    "target_property": "title",
                     "target_argument_position": 0
                 },
                 {
                     "input_parameter": "description",
-                    "target_property": "data/description",
+                    "target_property": "description",
                     "target_argument_position": 0
                 },
                 {
                     "input_parameter": "effort",
-                    "target_property": "data/effort",
+                    "target_property": "effort",
                     "target_argument_position": 0
                 },
                 {
                     "input_parameter": "severity",
-                    "target_property": "data/severity",
+                    "target_property": "severity",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "log_entries",
+                    "input_parameter_group": "log_entries",
                     "target_property": "data/log_entries",
                     "target_argument_position": 0
                 }
