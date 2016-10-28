@@ -79,6 +79,6 @@ module eapearson_GroupedParametersTest {
     funcdef validate_bug(Bug bug)
         returns (UnspecifiedObject result) authentication required;
 
-    funcdef validate_checklist(CarChecklist checklist)
-        returns (UnspecifiedObject result) authentication required;
+    /*funcdef validate_checklist(CarChecklist checklist)
+        returns (UnspecifiedObject result) authentication required;*/
 };
