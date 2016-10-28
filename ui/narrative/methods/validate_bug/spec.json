@@ -30,7 +30,8 @@
             "allow_multiple": false,
             "field_type": "textarea",
             "text_options": {
-                "n_rows": 10
+                "n_rows": 10,
+                "max_length": 1000
             }
         },
         {   
@@ -79,6 +80,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
+                "max_length": "25"
             }
         },
         {
@@ -90,7 +92,6 @@
             "field_type": "text",
             "validate_as": "float",
             "text_options": {
-                
             }
         },
         {
@@ -133,7 +134,8 @@
             "allow_multiple": false,
             "field_type": "textarea",
             "text_options": {
-                "n_rows": 5
+                "n_rows": 5,
+                "max_length": 1000
             }
         }
     ],

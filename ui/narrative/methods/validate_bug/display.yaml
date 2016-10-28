@@ -63,7 +63,7 @@ parameters :
         long-hint: Comments
 
 parameter-groups:
-    address: 
+    log_entries: 
         ui-name: Log Entries
         short-hint: Address
         long-hint: Address
