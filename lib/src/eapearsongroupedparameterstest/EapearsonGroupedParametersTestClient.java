@@ -197,23 +197,6 @@ public class EapearsonGroupedParametersTestClient {
         return res.get(0);
     }
 
-    /**
-     * <p>Original spec-file function name: validate_checklist</p>
-     * <pre>
-     * </pre>
-     * @param   checklist   instance of type {@link eapearsongroupedparameterstest.CarChecklist CarChecklist}
-     * @return   parameter "result" of unspecified object
-     * @throws IOException if an IO exception occurs
-     * @throws JsonClientException if a JSON RPC exception occurs
-     */
-    public UObject validateChecklist(CarChecklist checklist, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
-        List<Object> args = new ArrayList<Object>();
-        args.add(checklist);
-        TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
-        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_checklist", args, retType, true, true, jsonRpcContext, this.serviceVersion);
-        return res.get(0);
-    }
-
     public Map<String, Object> status(RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         TypeReference<List<Map<String, Object>>> retType = new TypeReference<List<Map<String, Object>>>() {};

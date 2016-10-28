@@ -311,126 +311,6 @@ LogEntry is a reference to a hash where the following keys are defined:
     }
 }
  
-
-
-=head2 validate_checklist
-
-  $result = $obj->validate_checklist($checklist)
-
-=over 4
-
-=item Parameter and return types
-
-=begin html
-
-<pre>
-$checklist is an eapearson_GroupedParametersTest.CarChecklist
-$result is an UnspecifiedObject, which can hold any non-null object
-CarChecklist is a reference to a hash where the following keys are defined:
-	date has a value which is an eapearson_GroupedParametersTest.Date
-	left_door has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	right_door has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	interior has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	gas has a value which is an eapearson_GroupedParametersTest.Fluid
-	wiper_fluid has a value which is an eapearson_GroupedParametersTest.Fluid
-	coolant has a value which is an eapearson_GroupedParametersTest.Fluid
-Date is a reference to a hash where the following keys are defined:
-	year has a value which is an int
-	month has a value which is an int
-	day has a value which is an int
-InspectionItem is a reference to a hash where the following keys are defined:
-	checked has a value which is an int
-	condition has a value which is a string
-	repair_cost has a value which is a float
-Fluid is a reference to a hash where the following keys are defined:
-	max_capacity has a value which is a float
-	current_capacity has a value which is a float
-
-</pre>
-
-=end html
-
-=begin text
-
-$checklist is an eapearson_GroupedParametersTest.CarChecklist
-$result is an UnspecifiedObject, which can hold any non-null object
-CarChecklist is a reference to a hash where the following keys are defined:
-	date has a value which is an eapearson_GroupedParametersTest.Date
-	left_door has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	right_door has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	interior has a value which is an eapearson_GroupedParametersTest.InspectionItem
-	gas has a value which is an eapearson_GroupedParametersTest.Fluid
-	wiper_fluid has a value which is an eapearson_GroupedParametersTest.Fluid
-	coolant has a value which is an eapearson_GroupedParametersTest.Fluid
-Date is a reference to a hash where the following keys are defined:
-	year has a value which is an int
-	month has a value which is an int
-	day has a value which is an int
-InspectionItem is a reference to a hash where the following keys are defined:
-	checked has a value which is an int
-	condition has a value which is a string
-	repair_cost has a value which is a float
-Fluid is a reference to a hash where the following keys are defined:
-	max_capacity has a value which is a float
-	current_capacity has a value which is a float
-
-
-=end text
-
-=item Description
-
-
-
-=back
-
-=cut
-
- sub validate_checklist
-{
-    my($self, @args) = @_;
-
-# Authentication: required
-
-    if ((my $n = @args) != 1)
-    {
-	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
-							       "Invalid argument count for function validate_checklist (received $n, expecting 1)");
-    }
-    {
-	my($checklist) = @args;
-
-	my @_bad_arguments;
-        (ref($checklist) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"checklist\" (value was \"$checklist\")");
-        if (@_bad_arguments) {
-	    my $msg = "Invalid arguments passed to validate_checklist:\n" . join("", map { "\t$_\n" } @_bad_arguments);
-	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
-								   method_name => 'validate_checklist');
-	}
-    }
-
-    my $url = $self->{url};
-    my $result = $self->{client}->call($url, $self->{headers}, {
-	    method => "eapearson_GroupedParametersTest.validate_checklist",
-	    params => \@args,
-    });
-    if ($result) {
-	if ($result->is_error) {
-	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
-					       code => $result->content->{error}->{code},
-					       method_name => 'validate_checklist',
-					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
-					      );
-	} else {
-	    return wantarray ? @{$result->result} : $result->result->[0];
-	}
-    } else {
-        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_checklist",
-					    status_line => $self->{client}->status_line,
-					    method_name => 'validate_checklist',
-				       );
-    }
-}
- 
   
 sub status
 {
@@ -474,16 +354,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_checklist',
+                method_name => 'validate_bug',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_checklist",
+            error => "Error invoking method validate_bug",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_checklist',
+            method_name => 'validate_bug',
         );
     }
 }

@@ -62,32 +62,6 @@ class eapearson_GroupedParametersTest(object):
             'eapearson_GroupedParametersTest.validate_bug',
             [bug], self._service_ver, context)
 
-    def validate_checklist(self, checklist, context=None):
-        """
-        :param checklist: instance of type "CarChecklist" -> structure:
-           parameter "date" of type "Date" -> structure: parameter "year" of
-           Long, parameter "month" of Long, parameter "day" of Long,
-           parameter "left_door" of type "InspectionItem" -> structure:
-           parameter "checked" of Long, parameter "condition" of String,
-           parameter "repair_cost" of Double, parameter "right_door" of type
-           "InspectionItem" -> structure: parameter "checked" of Long,
-           parameter "condition" of String, parameter "repair_cost" of
-           Double, parameter "interior" of type "InspectionItem" ->
-           structure: parameter "checked" of Long, parameter "condition" of
-           String, parameter "repair_cost" of Double, parameter "gas" of type
-           "Fluid" (Now some flat groups) -> structure: parameter
-           "max_capacity" of Double, parameter "current_capacity" of Double,
-           parameter "wiper_fluid" of type "Fluid" (Now some flat groups) ->
-           structure: parameter "max_capacity" of Double, parameter
-           "current_capacity" of Double, parameter "coolant" of type "Fluid"
-           (Now some flat groups) -> structure: parameter "max_capacity" of
-           Double, parameter "current_capacity" of Double
-        :returns: instance of unspecified object
-        """
-        return self._client.call_method(
-            'eapearson_GroupedParametersTest.validate_checklist',
-            [checklist], self._service_ver, context)
-
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',
                                         [], self._service_ver, context)

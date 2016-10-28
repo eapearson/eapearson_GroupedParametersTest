@@ -23,7 +23,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "1fc604b1566ce69509eb2bd5da4cc3fb93a9ce6a";
+    private static final String gitCommitHash = "120e344cac1e418c25e7bed76fea1e0f579ab8d6";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -61,21 +61,6 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         UObject returnVal = null;
         //BEGIN validate_bug
         //END validate_bug
-        return returnVal;
-    }
-
-    /**
-     * <p>Original spec-file function name: validate_checklist</p>
-     * <pre>
-     * </pre>
-     * @param   checklist   instance of type {@link eapearsongroupedparameterstest.CarChecklist CarChecklist}
-     * @return   parameter "result" of unspecified object
-     */
-    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_checklist", async=true)
-    public UObject validateChecklist(CarChecklist checklist, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
-        UObject returnVal = null;
-        //BEGIN validate_checklist
-        //END validate_checklist
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")
