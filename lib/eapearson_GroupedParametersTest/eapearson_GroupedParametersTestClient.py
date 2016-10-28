@@ -52,10 +52,10 @@ class eapearson_GroupedParametersTest(object):
         """
         :param bug: instance of type "Bug" -> structure: parameter "title" of
            String, parameter "description" of String, parameter "severity" of
-           Long, parameter "effort" of Long, parameter "log" of list of type
-           "LogEntry" (Throw in floats and ints) -> structure: parameter
-           "time_started" of String, parameter "time_spent" of Double,
-           parameter "comments" of String
+           Long, parameter "effort" of Long, parameter "log_entries" of list
+           of type "LogEntry" (Throw in floats and ints) -> structure:
+           parameter "time_started" of String, parameter "time_spent" of
+           Double, parameter "comments" of String
         :returns: instance of unspecified object
         """
         return self._client.call_method(

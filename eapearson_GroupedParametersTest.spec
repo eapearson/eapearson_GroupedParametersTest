@@ -37,7 +37,7 @@ module eapearson_GroupedParametersTest {
         string description;
         int severity;
         int effort;
-        list<LogEntry> log;        
+        list<LogEntry> log_entries;        
     } Bug;
 
     /* Next we will add in workspace refs */

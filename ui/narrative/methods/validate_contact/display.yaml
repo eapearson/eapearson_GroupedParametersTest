@@ -1,10 +1,10 @@
 #
 # define display information
 #
-name: Validate Grouped Parameters
+name: Validate a Contact
 
 tooltip: |
-    Validates grouped parameters
+    Validates a Contact
 
 screenshots: []
 
@@ -72,4 +72,6 @@ parameter-groups:
 
 
 description : |
-    <p>Method to accept and validate grouped parameters</p>
+    <p>Method to accept and validate a simple contact.</p>
+    <p>Exercises the grouped parameters aspect of the spec. The contact addresses
+       are a list of groups of strings.</p>

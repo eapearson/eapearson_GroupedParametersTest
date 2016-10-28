@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "description",
     "severity",
     "effort",
-    "log"
+    "log_entries"
 })
 public class Bug {
 
@@ -36,8 +36,8 @@ public class Bug {
     private Long severity;
     @JsonProperty("effort")
     private Long effort;
-    @JsonProperty("log")
-    private List<LogEntry> log;
+    @JsonProperty("log_entries")
+    private List<LogEntry> logEntries;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("title")
@@ -100,18 +100,18 @@ public class Bug {
         return this;
     }
 
-    @JsonProperty("log")
-    public List<LogEntry> getLog() {
-        return log;
+    @JsonProperty("log_entries")
+    public List<LogEntry> getLogEntries() {
+        return logEntries;
     }
 
-    @JsonProperty("log")
-    public void setLog(List<LogEntry> log) {
-        this.log = log;
+    @JsonProperty("log_entries")
+    public void setLogEntries(List<LogEntry> logEntries) {
+        this.logEntries = logEntries;
     }
 
-    public Bug withLog(List<LogEntry> log) {
-        this.log = log;
+    public Bug withLogEntries(List<LogEntry> logEntries) {
+        this.logEntries = logEntries;
         return this;
     }
 
@@ -127,7 +127,7 @@ public class Bug {
 
     @Override
     public String toString() {
-        return ((((((((((((("Bug"+" [title=")+ title)+", description=")+ description)+", severity=")+ severity)+", effort=")+ effort)+", log=")+ log)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((("Bug"+" [title=")+ title)+", description=")+ description)+", severity=")+ severity)+", effort=")+ effort)+", logEntries=")+ logEntries)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }
