@@ -176,8 +176,8 @@
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter_group": "log_entries",
-                    "target_property": "data/log_entries",
+                    "input_parameter": "log_entries",
+                    "target_property": "log_entries",
                     "target_argument_position": 0
                 }
             ],
