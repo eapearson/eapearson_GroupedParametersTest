@@ -39,7 +39,8 @@
             "optional": true,
             "advanced": false, 
             "allow_multiple": false,
-            "field_type": "int",
+            "field_type": "text",
+            "validate_as": "int",
             "text_options": {
                 "min_int": 1,
                 "max_int": 5
@@ -70,8 +71,6 @@
             }
         },
 
-
-
         {
             "id": "time_started",
             "default_values": [""],
@@ -89,7 +88,9 @@
             "advanced": false, 
             "allow_multiple": false,
             "field_type": "text",
+            "validate_as": "float",
             "text_options": {
+                
             }
         },
         {
@@ -102,28 +103,32 @@
             "dropdown_options": {
                 "options": [
                     {
-                        "display": "Design", "value": "design"
+                        "display": "Design",
+                        "value": "design"
                     },
                     {
-                        "display": "Meeting", "value": "meeting"
+                        "display": "Meeting",
+                        "value": "meeting"
                     },
                     {
-                        "display": "Development", "value": "development"
+                        "display": "Development",
+                        "value": "development"
                     },
                     {
-                        "display": "Testing", "value": "testing"
+                        "display": "Testing",
+                        "value": "testing"
                     },
                     {
-                        "display": "Documentation", "value": "documentation"
+                        "display": "Documentation",
+                        "value": "documentation"
                     }
                 ]
             }
         },
         {
             "id": "comments",
-            "optional": true,
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false, 
             "allow_multiple": false,
             "field_type": "textarea",
