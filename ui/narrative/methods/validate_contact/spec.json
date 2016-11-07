@@ -382,7 +382,6 @@
             ],
             "optional": false,
             "allow_multiple": true,
-            "mapping": {},
             "with_border": true
         },
         {
@@ -394,7 +393,6 @@
             ],
             "optional": true,
             "allow_multiple": true,
-            "mapping": {},
             "with_border": true
         }
     ],
