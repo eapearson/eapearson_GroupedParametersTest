@@ -337,9 +337,26 @@
             "default_values": [
                 ""
             ],
-            "field_type": "text",
-            "text_options": {
-                "max_length": 15
+            "field_type": "dropdown",
+            "dropdown_options": {
+                "options": [
+                    {
+                        "value": "mobile",
+                        "display": "Mobile"
+                    },
+                    {
+                        "value": "home",
+                        "display": "Home"
+                    },
+                    {
+                        "value": "work",
+                        "display": "Work"
+                    },
+                    {
+                        "value": "other",
+                        "display": "Other"
+                    }
+                ]
             }
         },
         {
@@ -381,7 +398,7 @@
                 "postal_code"
             ],
             "optional": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "with_border": true
         },
         {
