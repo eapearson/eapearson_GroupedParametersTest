@@ -166,6 +166,7 @@ public class EapearsonGroupedParametersTestClient {
     /**
      * <p>Original spec-file function name: validate_contact</p>
      * <pre>
+     * Now, just a few flat groups
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
      * @return   parameter "result" of unspecified object

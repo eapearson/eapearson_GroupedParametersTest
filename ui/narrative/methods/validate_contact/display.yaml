@@ -63,12 +63,28 @@ parameters :
         ui-name: Country
         short-hint: short hint
         long-hint: long hint
+    phone_type:
+        ui-name: Phone Type
+        short-hint: Type of Phone
+        long-hint: The type of phone_type
+    phone_number:
+        ui-name: Phone Number
+        short-hint: The phone Number
+        long-hint: Yes, really, the phone Number
+    phone_comment:
+        ui-name: Phone Comments
+        short-hint: The phone Comments
+        long-hint: Comments about this phone number.
 
 parameter-groups:
     address: 
         ui-name: Address
         short-hint: Address
         long-hint: Address
+    phones:
+        ui-name: phones
+        short-hint: Your phones
+        long-hint: Your telephones
 
 
 description : |

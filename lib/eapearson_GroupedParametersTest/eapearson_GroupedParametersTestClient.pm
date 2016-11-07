@@ -126,12 +126,17 @@ Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
 	address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
 	city has a value which is a string
 	state has a value which is a string
 	postal_code has a value which is a string
 	country has a value which is a string
+Phone is a reference to a hash where the following keys are defined:
+	phone_type has a value which is a string
+	phone_number has a value which is a string
+	phone_comments has a value which is a string
 
 </pre>
 
@@ -145,19 +150,24 @@ Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
 	address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
 	city has a value which is a string
 	state has a value which is a string
 	postal_code has a value which is a string
 	country has a value which is a string
+Phone is a reference to a hash where the following keys are defined:
+	phone_type has a value which is a string
+	phone_number has a value which is a string
+	phone_comments has a value which is a string
 
 
 =end text
 
 =item Description
 
-
+Now, just a few flat groups
 
 =back
 
@@ -443,6 +453,40 @@ country has a value which is a string
 
 
 
+=head2 Phone
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+phone_type has a value which is a string
+phone_number has a value which is a string
+phone_comments has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+phone_type has a value which is a string
+phone_number has a value which is a string
+phone_comments has a value which is a string
+
+
+=end text
+
+=back
+
+
+
 =head2 Contact
 
 =over 4
@@ -458,6 +502,7 @@ a reference to a hash where the following keys are defined:
 first_name has a value which is a string
 last_name has a value which is a string
 address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 
 </pre>
 
@@ -469,6 +514,7 @@ a reference to a hash where the following keys are defined:
 first_name has a value which is a string
 last_name has a value which is a string
 address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 
 
 =end text
@@ -571,8 +617,8 @@ Now some flat groups
 
 <pre>
 a reference to a hash where the following keys are defined:
-max_capacity has a value which is a float
-current_capacity has a value which is a float
+max_volume has a value which is a float
+current_volume has a value which is a float
 
 </pre>
 
@@ -581,8 +627,8 @@ current_capacity has a value which is a float
 =begin text
 
 a reference to a hash where the following keys are defined:
-max_capacity has a value which is a float
-current_capacity has a value which is a float
+max_volume has a value which is a float
+current_volume has a value which is a float
 
 
 =end text

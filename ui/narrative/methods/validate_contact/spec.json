@@ -87,6 +87,40 @@
             "text_options": {
 
             }
+        },
+        {
+            "id": "phone_type",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text", 
+            "text_options": {
+                "max_length": 15            
+            }
+        },
+        {
+            "id": "phone_number",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "text", 
+            "text_options": {
+                "max_length": 25,
+                "validate_as": "phone_number"
+            }
+        },
+        {
+            "id": "phone_comment",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [""],
+            "field_type": "textarea", 
+            "text_options": {
+                "max_length": 1000
+            }
         }
     ],
     "parameter-groups": [
@@ -94,6 +128,16 @@
             "id": "address",
             "parameters": [
                 "street_address", "city", "state", "country", "postal_code"
+            ],
+            "optional": false,
+            "allow_multiple": false,
+            "mapping": {},
+            "with_border": true
+        },
+        {
+            "id": "phones",
+            "parameters": [
+                "phone_type", "phone_number", "phone_comment"                
             ],
             "optional": true,
             "allow_multiple": true,
@@ -120,6 +164,11 @@
                 {
                     "input_parameter": "address",
                     "target_property": "address",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "phones",
+                    "target_property": "phones",
                     "target_argument_position": 0
                 }
             ],

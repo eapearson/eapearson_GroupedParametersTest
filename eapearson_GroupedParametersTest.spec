@@ -18,9 +18,16 @@ module eapearson_GroupedParametersTest {
     } Address;
 
     typedef structure {
+        string phone_type;
+        string phone_number;
+        string phone_comments;
+    } Phone;
+
+    typedef structure {
         string first_name;
         string last_name;
         list<Address> address;
+        list<Phone> phones;
     } Contact;
 
 
@@ -46,8 +53,8 @@ module eapearson_GroupedParametersTest {
     /* Now some flat groups */
 
     typedef structure {
-        float max_capacity;
-        float current_capacity;
+        float max_volume;
+        float current_volume;
     } Fluid;
 
     typedef structure {
@@ -72,6 +79,7 @@ module eapearson_GroupedParametersTest {
         Fluid coolant;
     } CarChecklist;
 
+    /* Now, just a few flat groups */
 
     funcdef validate_contact(Contact contact)
         returns (UnspecifiedObject result) authentication required;

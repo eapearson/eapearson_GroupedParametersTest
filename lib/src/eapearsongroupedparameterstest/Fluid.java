@@ -21,44 +21,44 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("com.googlecode.jsonschema2pojo")
 @JsonPropertyOrder({
-    "max_capacity",
-    "current_capacity"
+    "max_volume",
+    "current_volume"
 })
 public class Fluid {
 
-    @JsonProperty("max_capacity")
-    private Double maxCapacity;
-    @JsonProperty("current_capacity")
-    private Double currentCapacity;
+    @JsonProperty("max_volume")
+    private Double maxVolume;
+    @JsonProperty("current_volume")
+    private Double currentVolume;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("max_capacity")
-    public Double getMaxCapacity() {
-        return maxCapacity;
+    @JsonProperty("max_volume")
+    public Double getMaxVolume() {
+        return maxVolume;
     }
 
-    @JsonProperty("max_capacity")
-    public void setMaxCapacity(Double maxCapacity) {
-        this.maxCapacity = maxCapacity;
+    @JsonProperty("max_volume")
+    public void setMaxVolume(Double maxVolume) {
+        this.maxVolume = maxVolume;
     }
 
-    public Fluid withMaxCapacity(Double maxCapacity) {
-        this.maxCapacity = maxCapacity;
+    public Fluid withMaxVolume(Double maxVolume) {
+        this.maxVolume = maxVolume;
         return this;
     }
 
-    @JsonProperty("current_capacity")
-    public Double getCurrentCapacity() {
-        return currentCapacity;
+    @JsonProperty("current_volume")
+    public Double getCurrentVolume() {
+        return currentVolume;
     }
 
-    @JsonProperty("current_capacity")
-    public void setCurrentCapacity(Double currentCapacity) {
-        this.currentCapacity = currentCapacity;
+    @JsonProperty("current_volume")
+    public void setCurrentVolume(Double currentVolume) {
+        this.currentVolume = currentVolume;
     }
 
-    public Fluid withCurrentCapacity(Double currentCapacity) {
-        this.currentCapacity = currentCapacity;
+    public Fluid withCurrentVolume(Double currentVolume) {
+        this.currentVolume = currentVolume;
         return this;
     }
 
@@ -74,7 +74,7 @@ public class Fluid {
 
     @Override
     public String toString() {
-        return ((((((("Fluid"+" [maxCapacity=")+ maxCapacity)+", currentCapacity=")+ currentCapacity)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((("Fluid"+" [maxVolume=")+ maxVolume)+", currentVolume=")+ currentVolume)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

@@ -23,7 +23,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "489ee214699c15f9de22fb4ebc4b5bbe3a34061e";
+    private static final String gitCommitHash = "233c0c3aa6ab9965de4b8995353ef1f745afba52";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -37,6 +37,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     /**
      * <p>Original spec-file function name: validate_contact</p>
      * <pre>
+     * Now, just a few flat groups
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
      * @return   parameter "result" of unspecified object
