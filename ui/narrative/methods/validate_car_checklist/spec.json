@@ -1,0 +1,156 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "help@kbase.us",
+    "categories": ["active"],
+    "app_type": "app",
+    "widgets": {
+        "input": null,
+        "output": null
+    },
+    "parameters": [ 
+        {
+            "id": "title",
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+                "max_length": 100
+            }
+        },
+        {
+            "id": "description",
+            "default_values": [""],
+            "field_type": "textarea",
+            "text_options": {
+                "n_rows": 10
+            }
+        },
+        {   
+            "id": "effort",
+            "default_values": [""],
+            "field_type": "int",
+            "text_options": {
+                "min_int": 1,
+                "max_int": 5
+            }
+        },
+        {
+            "id": "severity",
+            "default_values": [""],
+            "field_type": "dropdown",
+            "text_options": {
+                "options": [
+                    {
+                        "display": "Easy",
+                        "value": "easy"
+                    },
+                    {
+                        "display": "Medium",
+                        "value": "medium"
+                    },
+                    {
+                        "display": "Easy",
+                        "value": "hard"
+                    }
+                ]
+            }
+        },
+
+
+
+        {
+            "id": "time_started",
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+            }
+        },
+        {
+            "id": "time_spent",
+            "default_values": [""],
+            "field_type": "text",
+            "text_options": {
+            }
+        },
+        {
+            "id": "comments",
+            "optional": true,
+            "default_values": [""],
+            "field_type": "textarea",
+            "text_options": {
+                "n_rows": 5
+            }
+        }
+    ],
+    "parameter-groups": [
+        {
+            "id": "log_entries",
+            "parameters": [
+                "time_started", "time_spent", "comments"
+            ],
+            "optional": true,
+            "allow_multiple": true,
+            "mapping": {},
+            "with_border": true
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearson_GroupedParametersTest",
+            "method": "validate_params",
+            "input_mapping": [
+                {
+                    "input_parameter": "title",
+                    "target_property": "data/title",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "description",
+                    "target_property": "data/description",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "effort",
+                    "target_property": "data/effort",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "severity",
+                    "target_property": "data/severity",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "log_entries",
+                    "target_property": "data/log_entries",
+                    "target_argument_position": 0
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_argument_position": 0
+                }
+            ],
+            "output_mapping": [
+                {
+                    "service_method_output_path": [0],
+                    "target_property": "results"
+                },
+                {
+                    "service_method_output_path": [0, "report_name"],
+                    "target_property": "report_name"
+                },
+                {
+                    "service_method_output_path": [0, "report_ref"],
+                    "target_property": "report_ref"
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspaceName"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
