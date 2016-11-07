@@ -130,7 +130,7 @@
                 "street_address", "city", "state", "country", "postal_code"
             ],
             "optional": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "mapping": {},
             "with_border": true
         },
