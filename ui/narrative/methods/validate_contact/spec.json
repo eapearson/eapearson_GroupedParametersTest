@@ -4,66 +4,307 @@
         "eapearson"
     ],
     "contact": "help@kbase.us",
-    "categories": ["active"],
+    "categories": [
+        "active"
+    ],
     "app_type": "app",
     "widgets": {
         "input": null,
         "output": null
     },
-    "parameters": [ 
+    "parameters": [
         {
             "id": "first_name",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "last_name",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "street_address",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "city",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "state",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text",
+            "default_values": [
+                ""
+            ],
+            "field_type": "dropdown",
             "text_options": {
-
+                "options": [
+                    {
+                        "display": "Alabama",
+                        "value": "AL"
+                    },
+                    {
+                        "display": "Alaska",
+                        "value": "AK"
+                    },
+                    {
+                        "display": "American Samoa",
+                        "value": "AS"
+                    },
+                    {
+                        "display": "Arizona",
+                        "value": "AZ"
+                    },
+                    {
+                        "display": "Arkansas",
+                        "value": "AR"
+                    },
+                    {
+                        "display": "California",
+                        "value": "CA"
+                    },
+                    {
+                        "display": "Colorado",
+                        "value": "CO"
+                    },
+                    {
+                        "display": "Connecticut",
+                        "value": "CT"
+                    },
+                    {
+                        "display": "Delaware",
+                        "value": "DE"
+                    },
+                    {
+                        "display": "District Of Columbia",
+                        "value": "DC"
+                    },
+                    {
+                        "display": "Federated States Of Micronesia",
+                        "value": "FM"
+                    },
+                    {
+                        "display": "Florida",
+                        "value": "FL"
+                    },
+                    {
+                        "display": "Georgia",
+                        "value": "GA"
+                    },
+                    {
+                        "display": "Guam",
+                        "value": "GU"
+                    },
+                    {
+                        "display": "Hawaii",
+                        "value": "HI"
+                    },
+                    {
+                        "display": "Idaho",
+                        "value": "ID"
+                    },
+                    {
+                        "display": "Illinois",
+                        "value": "IL"
+                    },
+                    {
+                        "display": "Indiana",
+                        "value": "IN"
+                    },
+                    {
+                        "display": "Iowa",
+                        "value": "IA"
+                    },
+                    {
+                        "display": "Kansas",
+                        "value": "KS"
+                    },
+                    {
+                        "display": "Kentucky",
+                        "value": "KY"
+                    },
+                    {
+                        "display": "Louisiana",
+                        "value": "LA"
+                    },
+                    {
+                        "display": "Maine",
+                        "value": "ME"
+                    },
+                    {
+                        "display": "Marshall Islands",
+                        "value": "MH"
+                    },
+                    {
+                        "display": "Maryland",
+                        "value": "MD"
+                    },
+                    {
+                        "display": "Massachusetts",
+                        "value": "MA"
+                    },
+                    {
+                        "display": "Michigan",
+                        "value": "MI"
+                    },
+                    {
+                        "display": "Minnesota",
+                        "value": "MN"
+                    },
+                    {
+                        "display": "Mississippi",
+                        "value": "MS"
+                    },
+                    {
+                        "display": "Missouri",
+                        "value": "MO"
+                    },
+                    {
+                        "display": "Montana",
+                        "value": "MT"
+                    },
+                    {
+                        "display": "Nebraska",
+                        "value": "NE"
+                    },
+                    {
+                        "display": "Nevada",
+                        "value": "NV"
+                    },
+                    {
+                        "display": "New Hampshire",
+                        "value": "NH"
+                    },
+                    {
+                        "display": "New Jersey",
+                        "value": "NJ"
+                    },
+                    {
+                        "display": "New Mexico",
+                        "value": "NM"
+                    },
+                    {
+                        "display": "New York",
+                        "value": "NY"
+                    },
+                    {
+                        "display": "North Carolina",
+                        "value": "NC"
+                    },
+                    {
+                        "display": "North Dakota",
+                        "value": "ND"
+                    },
+                    {
+                        "display": "Northern Mariana Islands",
+                        "value": "MP"
+                    },
+                    {
+                        "display": "Ohio",
+                        "value": "OH"
+                    },
+                    {
+                        "display": "Oklahoma",
+                        "value": "OK"
+                    },
+                    {
+                        "display": "Oregon",
+                        "value": "OR"
+                    },
+                    {
+                        "display": "Palau",
+                        "value": "PW"
+                    },
+                    {
+                        "display": "Pennsylvania",
+                        "value": "PA"
+                    },
+                    {
+                        "display": "Puerto Rico",
+                        "value": "PR"
+                    },
+                    {
+                        "display": "Rhode Island",
+                        "value": "RI"
+                    },
+                    {
+                        "display": "South Carolina",
+                        "value": "SC"
+                    },
+                    {
+                        "display": "South Dakota",
+                        "value": "SD"
+                    },
+                    {
+                        "display": "Tennessee",
+                        "value": "TN"
+                    },
+                    {
+                        "display": "Texas",
+                        "value": "TX"
+                    },
+                    {
+                        "display": "Utah",
+                        "value": "UT"
+                    },
+                    {
+                        "display": "Vermont",
+                        "value": "VT"
+                    },
+                    {
+                        "display": "Virgin Islands",
+                        "value": "VI"
+                    },
+                    {
+                        "display": "Virginia",
+                        "value": "VA"
+                    },
+                    {
+                        "display": "Washington",
+                        "value": "WA"
+                    },
+                    {
+                        "display": "West Virginia",
+                        "value": "WV"
+                    },
+                    {
+                        "display": "Wisconsin",
+                        "value": "WI"
+                    },
+                    {
+                        "display": "Wyoming",
+                        "value": "WY"
+                    }
+                ]
             }
         },
         {
@@ -71,32 +312,34 @@
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "country",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
+            "default_values": [
+                ""
+            ],
             "field_type": "text",
-            "text_options": {
-
-            }
+            "text_options": {}
         },
         {
             "id": "phone_type",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text", 
+            "default_values": [
+                ""
+            ],
+            "field_type": "text",
             "text_options": {
-                "max_length": 15            
+                "max_length": 15
             }
         },
         {
@@ -104,8 +347,10 @@
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "text", 
+            "default_values": [
+                ""
+            ],
+            "field_type": "text",
             "text_options": {
                 "max_length": 25,
                 "validate_as": "phone_number"
@@ -116,8 +361,10 @@
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [""],
-            "field_type": "textarea", 
+            "default_values": [
+                ""
+            ],
+            "field_type": "textarea",
             "text_options": {
                 "max_length": 1000
             }
@@ -127,7 +374,11 @@
         {
             "id": "address",
             "parameters": [
-                "street_address", "city", "state", "country", "postal_code"
+                "street_address",
+                "city",
+                "state",
+                "country",
+                "postal_code"
             ],
             "optional": false,
             "allow_multiple": true,
@@ -137,7 +388,9 @@
         {
             "id": "phones",
             "parameters": [
-                "phone_type", "phone_number", "phone_comment"                
+                "phone_type",
+                "phone_number",
+                "phone_comment"
             ],
             "optional": true,
             "allow_multiple": true,
@@ -174,15 +427,23 @@
             ],
             "output_mapping": [
                 {
-                    "service_method_output_path": [0],
+                    "service_method_output_path": [
+                        0
+                    ],
                     "target_property": "results"
                 },
                 {
-                    "service_method_output_path": [0, "report_name"],
+                    "service_method_output_path": [
+                        0,
+                        "report_name"
+                    ],
                     "target_property": "report_name"
                 },
                 {
-                    "service_method_output_path": [0, "report_ref"],
+                    "service_method_output_path": [
+                        0,
+                        "report_ref"
+                    ],
                     "target_property": "report_ref"
                 },
                 {
