@@ -90,7 +90,7 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_bug(Bug bug)
-        returns (UnspecifiedObject result) authentication required;
+        returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)
         returns (UnspecifiedObject result) authentication required;*/

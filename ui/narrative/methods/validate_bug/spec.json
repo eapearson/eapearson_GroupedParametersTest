@@ -8,7 +8,7 @@
     "app_type": "app",
     "widgets": {
         "input": null,
-        "output": null
+        "output": "no-display"
     },
     "parameters": [ 
         {
@@ -187,20 +187,10 @@
             ],
             "output_mapping": [
                 {
-                    "service_method_output_path": [0],
+                    "service_method_output_path": [
+                        0
+                    ],
                     "target_property": "results"
-                },
-                {
-                    "service_method_output_path": [0, "report_name"],
-                    "target_property": "report_name"
-                },
-                {
-                    "service_method_output_path": [0, "report_ref"],
-                    "target_property": "report_ref"
-                },
-                {
-                    "narrative_system_variable": "workspace",
-                    "target_property": "workspaceName"
                 }
             ]
         }

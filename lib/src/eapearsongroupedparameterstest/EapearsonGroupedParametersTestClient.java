@@ -11,7 +11,6 @@ import us.kbase.auth.AuthToken;
 import us.kbase.common.service.JsonClientCaller;
 import us.kbase.common.service.JsonClientException;
 import us.kbase.common.service.RpcContext;
-import us.kbase.common.service.UObject;
 import us.kbase.common.service.UnauthorizedException;
 
 /**
@@ -186,15 +185,15 @@ public class EapearsonGroupedParametersTestClient {
      * <pre>
      * </pre>
      * @param   bug   instance of type {@link eapearsongroupedparameterstest.Bug Bug}
-     * @return   parameter "result" of unspecified object
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
      * @throws IOException if an IO exception occurs
      * @throws JsonClientException if a JSON RPC exception occurs
      */
-    public UObject validateBug(Bug bug, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+    public TestResults validateBug(Bug bug, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         args.add(bug);
-        TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
-        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
+        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, true, jsonRpcContext, this.serviceVersion);
         return res.get(0);
     }
 

@@ -239,7 +239,7 @@ Now, just a few flat groups
 
 <pre>
 $bug is an eapearson_GroupedParametersTest.Bug
-$result is an UnspecifiedObject, which can hold any non-null object
+$result is an eapearson_GroupedParametersTest.TestResults
 Bug is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
@@ -250,6 +250,9 @@ LogEntry is a reference to a hash where the following keys are defined:
 	time_started has a value which is a string
 	time_spent has a value which is a float
 	comments has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
 
 </pre>
 
@@ -258,7 +261,7 @@ LogEntry is a reference to a hash where the following keys are defined:
 =begin text
 
 $bug is an eapearson_GroupedParametersTest.Bug
-$result is an UnspecifiedObject, which can hold any non-null object
+$result is an eapearson_GroupedParametersTest.TestResults
 Bug is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
@@ -269,6 +272,9 @@ LogEntry is a reference to a hash where the following keys are defined:
 	time_started has a value which is a string
 	time_spent has a value which is a float
 	comments has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
 
 
 =end text

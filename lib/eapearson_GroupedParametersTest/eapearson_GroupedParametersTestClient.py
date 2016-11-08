@@ -60,7 +60,8 @@ class eapearson_GroupedParametersTest(object):
            list of type "LogEntry" (Throw in floats and ints) -> structure:
            parameter "time_started" of String, parameter "time_spent" of
            Double, parameter "comments" of String
-        :returns: instance of unspecified object
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
         """
         return self._client.call_method(
             'eapearson_GroupedParametersTest.validate_bug',
