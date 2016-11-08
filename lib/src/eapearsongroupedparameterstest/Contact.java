@@ -31,8 +31,15 @@ public class Contact {
     private String firstName;
     @JsonProperty("last_name")
     private String lastName;
+    /**
+     * <p>Original spec-file type: Address</p>
+     * <pre>
+     * A pure string test of lists of structures (groups)
+     * </pre>
+     * 
+     */
     @JsonProperty("address")
-    private List<Address> address;
+    private Address address;
     @JsonProperty("phones")
     private List<Phone> phones;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -67,17 +74,31 @@ public class Contact {
         return this;
     }
 
+    /**
+     * <p>Original spec-file type: Address</p>
+     * <pre>
+     * A pure string test of lists of structures (groups)
+     * </pre>
+     * 
+     */
     @JsonProperty("address")
-    public List<Address> getAddress() {
+    public Address getAddress() {
         return address;
     }
 
+    /**
+     * <p>Original spec-file type: Address</p>
+     * <pre>
+     * A pure string test of lists of structures (groups)
+     * </pre>
+     * 
+     */
     @JsonProperty("address")
-    public void setAddress(List<Address> address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public Contact withAddress(List<Address> address) {
+    public Contact withAddress(Address address) {
         this.address = address;
         return this;
     }

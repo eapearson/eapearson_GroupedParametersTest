@@ -26,7 +26,7 @@ module eapearson_GroupedParametersTest {
     typedef structure {
         string first_name;
         string last_name;
-        list<Address> address;
+        Address address;
         list<Phone> phones;
     } Contact;
 

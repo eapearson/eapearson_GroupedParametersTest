@@ -38,13 +38,13 @@ class eapearson_GroupedParametersTest(object):
         Now, just a few flat groups
         :param contact: instance of type "Contact" -> structure: parameter
            "first_name" of String, parameter "last_name" of String, parameter
-           "address" of list of type "Address" (A pure string test of lists
-           of structures (groups)) -> structure: parameter "street_address"
-           of String, parameter "city" of String, parameter "state" of
-           String, parameter "postal_code" of String, parameter "country" of
-           String, parameter "phones" of list of type "Phone" -> structure:
-           parameter "phone_type" of String, parameter "phone_number" of
-           String, parameter "phone_comments" of String
+           "address" of type "Address" (A pure string test of lists of
+           structures (groups)) -> structure: parameter "street_address" of
+           String, parameter "city" of String, parameter "state" of String,
+           parameter "postal_code" of String, parameter "country" of String,
+           parameter "phones" of list of type "Phone" -> structure: parameter
+           "phone_type" of String, parameter "phone_number" of String,
+           parameter "phone_comments" of String
         :returns: instance of unspecified object
         """
         return self._client.call_method(

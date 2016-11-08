@@ -125,7 +125,7 @@ $result is an UnspecifiedObject, which can hold any non-null object
 Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
-	address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+	address has a value which is an eapearson_GroupedParametersTest.Address
 	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
@@ -149,7 +149,7 @@ $result is an UnspecifiedObject, which can hold any non-null object
 Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
-	address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+	address has a value which is an eapearson_GroupedParametersTest.Address
 	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
@@ -501,7 +501,7 @@ phone_comments has a value which is a string
 a reference to a hash where the following keys are defined:
 first_name has a value which is a string
 last_name has a value which is a string
-address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+address has a value which is an eapearson_GroupedParametersTest.Address
 phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 
 </pre>
@@ -513,7 +513,7 @@ phones has a value which is a reference to a list where each element is an eapea
 a reference to a hash where the following keys are defined:
 first_name has a value which is a string
 last_name has a value which is a string
-address has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Address
+address has a value which is an eapearson_GroupedParametersTest.Address
 phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
 
 
