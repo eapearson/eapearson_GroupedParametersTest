@@ -45,7 +45,8 @@ class eapearson_GroupedParametersTest(object):
            parameter "phones" of list of type "Phone" -> structure: parameter
            "phone_type" of String, parameter "phone_number" of String,
            parameter "phone_comments" of String
-        :returns: instance of unspecified object
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
         """
         return self._client.call_method(
             'eapearson_GroupedParametersTest.validate_contact',

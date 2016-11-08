@@ -121,7 +121,7 @@ sub new
 
 <pre>
 $contact is an eapearson_GroupedParametersTest.Contact
-$result is an UnspecifiedObject, which can hold any non-null object
+$result is an eapearson_GroupedParametersTest.TestResults
 Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
@@ -137,6 +137,9 @@ Phone is a reference to a hash where the following keys are defined:
 	phone_type has a value which is a string
 	phone_number has a value which is a string
 	phone_comments has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
 
 </pre>
 
@@ -145,7 +148,7 @@ Phone is a reference to a hash where the following keys are defined:
 =begin text
 
 $contact is an eapearson_GroupedParametersTest.Contact
-$result is an UnspecifiedObject, which can hold any non-null object
+$result is an eapearson_GroupedParametersTest.TestResults
 Contact is a reference to a hash where the following keys are defined:
 	first_name has a value which is a string
 	last_name has a value which is a string
@@ -161,6 +164,9 @@ Phone is a reference to a hash where the following keys are defined:
 	phone_type has a value which is a string
 	phone_number has a value which is a string
 	phone_comments has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
 
 
 =end text
@@ -739,6 +745,38 @@ interior has a value which is an eapearson_GroupedParametersTest.InspectionItem
 gas has a value which is an eapearson_GroupedParametersTest.Fluid
 wiper_fluid has a value which is an eapearson_GroupedParametersTest.Fluid
 coolant has a value which is an eapearson_GroupedParametersTest.Fluid
+
+
+=end text
+
+=back
+
+
+
+=head2 TestResults
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+status has a value which is a string
+detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+status has a value which is a string
+detail has a value which is a string
 
 
 =end text

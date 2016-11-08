@@ -169,15 +169,15 @@ public class EapearsonGroupedParametersTestClient {
      * Now, just a few flat groups
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
-     * @return   parameter "result" of unspecified object
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
      * @throws IOException if an IO exception occurs
      * @throws JsonClientException if a JSON RPC exception occurs
      */
-    public UObject validateContact(Contact contact, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+    public TestResults validateContact(Contact contact, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         args.add(contact);
-        TypeReference<List<UObject>> retType = new TypeReference<List<UObject>>() {};
-        List<UObject> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_contact", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
+        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_contact", args, retType, true, true, jsonRpcContext, this.serviceVersion);
         return res.get(0);
     }
 

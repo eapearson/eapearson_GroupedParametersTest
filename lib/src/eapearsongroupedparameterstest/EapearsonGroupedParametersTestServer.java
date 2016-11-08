@@ -23,7 +23,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "e0a6f1aae25bfc2c0fe0b7bbeb9f140889cbcc7a";
+    private static final String gitCommitHash = "a263552d8406a3bc8a054fe97005af84f335085b";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -40,12 +40,15 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
      * Now, just a few flat groups
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
-     * @return   parameter "result" of unspecified object
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
      */
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_contact", async=true)
-    public UObject validateContact(Contact contact, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
-        UObject returnVal = null;
+    public TestResults validateContact(Contact contact, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
         //BEGIN validate_contact
+        returnVal = new TestResults()
+        .withStatus('Okay!')
+        .withDetails('Really, okay for now');
         //END validate_contact
         return returnVal;
     }

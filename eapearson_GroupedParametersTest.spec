@@ -79,10 +79,15 @@ module eapearson_GroupedParametersTest {
         Fluid coolant;
     } CarChecklist;
 
+    typedef structure {
+        string status;
+        string detail;
+    } TestResults;
+
     /* Now, just a few flat groups */
 
     funcdef validate_contact(Contact contact)
-        returns (UnspecifiedObject result) authentication required;
+        returns (TestResults result) authentication required;
 
     funcdef validate_bug(Bug bug)
         returns (UnspecifiedObject result) authentication required;
