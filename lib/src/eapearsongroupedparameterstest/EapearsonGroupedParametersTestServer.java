@@ -23,7 +23,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "a263552d8406a3bc8a054fe97005af84f335085b";
+    private static final String gitCommitHash = "1ce7b2afbdaab940710c2da0a396c132bbb427b3";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -47,8 +47,8 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         TestResults returnVal = null;
         //BEGIN validate_contact
         returnVal = new TestResults()
-        .withStatus('Okay!')
-        .withDetails('Really, okay for now');
+        .withStatus("Okay!")
+        .withDetails("Really, okay for now");
         //END validate_contact
         return returnVal;
     }
