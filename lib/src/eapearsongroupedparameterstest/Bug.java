@@ -35,7 +35,7 @@ public class Bug {
     @JsonProperty("severity")
     private Long severity;
     @JsonProperty("effort")
-    private Long effort;
+    private String effort;
     @JsonProperty("log_entries")
     private List<LogEntry> logEntries;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -86,16 +86,16 @@ public class Bug {
     }
 
     @JsonProperty("effort")
-    public Long getEffort() {
+    public String getEffort() {
         return effort;
     }
 
     @JsonProperty("effort")
-    public void setEffort(Long effort) {
+    public void setEffort(String effort) {
         this.effort = effort;
     }
 
-    public Bug withEffort(Long effort) {
+    public Bug withEffort(String effort) {
         this.effort = effort;
         return this;
     }

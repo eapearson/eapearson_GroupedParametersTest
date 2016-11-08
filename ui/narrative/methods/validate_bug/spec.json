@@ -35,7 +35,7 @@
             }
         },
         {   
-            "id": "effort",
+            "id": "severity",
             "default_values": [""],
             "optional": true,
             "advanced": false, 
@@ -48,7 +48,7 @@
             }
         },
         {
-            "id": "severity",
+            "id": "effort",
             "default_values": [""],
             "optional": true,
             "advanced": false, 
@@ -65,7 +65,7 @@
                         "value": "medium"
                     },
                     {
-                        "display": "Easy",
+                        "display": "Hard",
                         "value": "hard"
                     }
                 ]
