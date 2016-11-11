@@ -1,0 +1,73 @@
+#
+# define display information
+#
+name: Validate Many Parameter Types
+
+tooltip: |
+    Validates many parameter types
+
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    title:
+        ui-name: Title
+        short-hint: Title
+        long-hint: Title
+    description:
+        ui-name: Description
+        short-hint: Description
+        long-hint: Description
+    measure_label:
+        ui-name: Label
+        short-hint: Label
+        long-hint: Label
+    measure_description:
+        ui-name: Description
+        short-hint: Description
+        long-hint: Description
+    measure_int:
+        ui-name: Int
+        short-hint: Int
+        long-hint: Int
+    measure_float:
+        ui-name: Float
+        short-hint: Float
+        long-hint: Float
+    measure_bool:
+        ui-name: Bool
+        short-hint: Bool
+        long-hint: Bool
+    measure_type:
+        ui-name: Dropdown
+        short-hint: Dropdown
+        long-hint: Dropdown
+
+parameter-groups:
+    measure: 
+        ui-name: Measure
+        short-hint: Measure
+        long-hint: GMeasure
+
+
+description : |
+    <p>Method to accept and validate a variety of parameters in groups.</p>

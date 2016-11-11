@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "0a770924a39ff874f39db078821aabe7df5b1d08";
+    private static final String gitCommitHash = "05bcd897ba70b1b679eab870c0e8de0d219b5f18";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -36,7 +36,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     /**
      * <p>Original spec-file function name: validate_contact</p>
      * <pre>
-     * Now, just a few flat groups
+     * Functions
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
      * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
@@ -63,7 +63,25 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     public TestResults validateBug(Bug bug, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
         TestResults returnVal = null;
         //BEGIN validate_bug
+          returnVal = new TestResults()
+            .withStatus("Okay!")
+            .withDetail("Your bug looks fine, thanks.");
         //END validate_bug
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_measurement</p>
+     * <pre>
+     * </pre>
+     * @param   arg1   instance of type {@link eapearsongroupedparameterstest.Measurement Measurement}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_measurement", async=true)
+    public TestResults validateMeasurement(Measurement arg1, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN validate_measurement
+        //END validate_measurement
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")

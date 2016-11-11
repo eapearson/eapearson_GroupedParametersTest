@@ -86,10 +86,34 @@ module eapearson_GroupedParametersTest {
 
     /* Now, just a few flat groups */
 
+    /* Measurement 
+       We use this to test all parameter types.
+    */
+
+    typedef structure {
+        string measure_label;
+        string measure_description;
+        int measure_int; 
+        float measure_float;
+        int measure_bool;
+        string measure_type;
+    } Measure;
+
+    typedef structure {
+        string title;
+        string description;
+        Measure measure;
+    } Measurement;
+
+    /* Functions */
+
     funcdef validate_contact(Contact contact)
         returns (TestResults result) authentication required;
 
     funcdef validate_bug(Bug bug)
+        returns (TestResults result) authentication required;
+
+    funcdef validate_measurement(Measurement)
         returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)

@@ -173,7 +173,7 @@ TestResults is a reference to a hash where the following keys are defined:
 
 =item Description
 
-Now, just a few flat groups
+Functions
 
 =back
 
@@ -333,6 +333,116 @@ TestResults is a reference to a hash where the following keys are defined:
     }
 }
  
+
+
+=head2 validate_measurement
+
+  $result = $obj->validate_measurement($Measurement)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$Measurement is an eapearson_GroupedParametersTest.Measurement
+$result is an eapearson_GroupedParametersTest.TestResults
+Measurement is a reference to a hash where the following keys are defined:
+	title has a value which is a string
+	description has a value which is a string
+	measure has a value which is an eapearson_GroupedParametersTest.Measure
+Measure is a reference to a hash where the following keys are defined:
+	measure_label has a value which is a string
+	measure_description has a value which is a string
+	measure_int has a value which is an int
+	measure_float has a value which is a float
+	measure_bool has a value which is an int
+	measure_type has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$Measurement is an eapearson_GroupedParametersTest.Measurement
+$result is an eapearson_GroupedParametersTest.TestResults
+Measurement is a reference to a hash where the following keys are defined:
+	title has a value which is a string
+	description has a value which is a string
+	measure has a value which is an eapearson_GroupedParametersTest.Measure
+Measure is a reference to a hash where the following keys are defined:
+	measure_label has a value which is a string
+	measure_description has a value which is a string
+	measure_int has a value which is an int
+	measure_float has a value which is a float
+	measure_bool has a value which is an int
+	measure_type has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub validate_measurement
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function validate_measurement (received $n, expecting 1)");
+    }
+    {
+	my($Measurement) = @args;
+
+	my @_bad_arguments;
+        (ref($Measurement) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"Measurement\" (value was \"$Measurement\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to validate_measurement:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'validate_measurement');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.validate_measurement",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'validate_measurement',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_measurement",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'validate_measurement',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -376,16 +486,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_bug',
+                method_name => 'validate_measurement',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_bug",
+            error => "Error invoking method validate_measurement",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_bug',
+            method_name => 'validate_measurement',
         );
     }
 }
@@ -783,6 +893,86 @@ detail has a value which is a string
 a reference to a hash where the following keys are defined:
 status has a value which is a string
 detail has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 Measure
+
+=over 4
+
+
+
+=item Description
+
+Measurement 
+We use this to test all parameter types.
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+measure_label has a value which is a string
+measure_description has a value which is a string
+measure_int has a value which is an int
+measure_float has a value which is a float
+measure_bool has a value which is an int
+measure_type has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+measure_label has a value which is a string
+measure_description has a value which is a string
+measure_int has a value which is an int
+measure_float has a value which is a float
+measure_bool has a value which is an int
+measure_type has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 Measurement
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+title has a value which is a string
+description has a value which is a string
+measure has a value which is an eapearson_GroupedParametersTest.Measure
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+title has a value which is a string
+description has a value which is a string
+measure has a value which is an eapearson_GroupedParametersTest.Measure
 
 
 =end text

@@ -35,7 +35,7 @@ class eapearson_GroupedParametersTest(object):
 
     def validate_contact(self, contact, context=None):
         """
-        Now, just a few flat groups
+        Functions
         :param contact: instance of type "Contact" -> structure: parameter
            "first_name" of String, parameter "last_name" of String, parameter
            "address" of type "Address" (A pure string test of lists of
@@ -66,6 +66,23 @@ class eapearson_GroupedParametersTest(object):
         return self._client.call_method(
             'eapearson_GroupedParametersTest.validate_bug',
             [bug], self._service_ver, context)
+
+    def validate_measurement(self, Measurement, context=None):
+        """
+        :param Measurement: instance of type "Measurement" -> structure:
+           parameter "title" of String, parameter "description" of String,
+           parameter "measure" of type "Measure" (Measurement We use this to
+           test all parameter types.) -> structure: parameter "measure_label"
+           of String, parameter "measure_description" of String, parameter
+           "measure_int" of Long, parameter "measure_float" of Double,
+           parameter "measure_bool" of Long, parameter "measure_type" of
+           String
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_measurement',
+            [Measurement], self._service_ver, context)
 
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',

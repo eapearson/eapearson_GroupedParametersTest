@@ -165,7 +165,7 @@ public class EapearsonGroupedParametersTestClient {
     /**
      * <p>Original spec-file function name: validate_contact</p>
      * <pre>
-     * Now, just a few flat groups
+     * Functions
      * </pre>
      * @param   contact   instance of type {@link eapearsongroupedparameterstest.Contact Contact}
      * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
@@ -194,6 +194,23 @@ public class EapearsonGroupedParametersTestClient {
         args.add(bug);
         TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
         List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        return res.get(0);
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_measurement</p>
+     * <pre>
+     * </pre>
+     * @param   arg1   instance of type {@link eapearsongroupedparameterstest.Measurement Measurement}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     * @throws IOException if an IO exception occurs
+     * @throws JsonClientException if a JSON RPC exception occurs
+     */
+    public TestResults validateMeasurement(Measurement arg1, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+        List<Object> args = new ArrayList<Object>();
+        args.add(arg1);
+        TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
+        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_measurement", args, retType, true, true, jsonRpcContext, this.serviceVersion);
         return res.get(0);
     }
 
