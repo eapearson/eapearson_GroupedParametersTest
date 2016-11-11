@@ -98,7 +98,7 @@
         {
             "id": "measure_type",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "field_type": "dropdown",
@@ -117,17 +117,54 @@
                     }
                 ]
             }
+        },
+
+        {
+            "id": "range_min",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_int": 0,
+                "max_int": 100
+            }
+        },
+        {
+            "id": "range_max",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_int": 0,
+                "max_int": 100
+            }
         }
     ],
     "parameter-groups": [{
-        "id": "measure",
-        "parameters": [
-            "measure_label", "measure_description", "measure_int", "measure_float", "measure_bool", "measure_type"
-        ],
-        "optional": false,
-        "allow_multiple": false,
-        "with_border": true
-    }],
+            "id": "measure",
+            "parameters": [
+                "measure_label", "measure_description", "measure_int", "measure_float", "measure_bool", "measure_type"
+            ],
+            "optional": false,
+            "allow_multiple": false,
+            "with_border": true
+        },
+        {
+            "id": "range",
+            "parameters": [
+                "range_min", "range_max"
+            ],
+            "optional": true,
+            "allow_multiple": false,
+            "with_border": true
+        }
+    ],
     "behavior": {
         "service-mapping": {
             "url": "",
@@ -146,6 +183,11 @@
                 {
                     "input_parameter": "measure",
                     "target_property": "measure",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "range",
+                    "target_property": "range",
                     "target_argument_position": 0
                 }
             ],

@@ -21,7 +21,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "title",
     "description",
-    "measure"
+    "measure",
+    "range"
 })
 public class Measurement {
 
@@ -39,6 +40,13 @@ public class Measurement {
      */
     @JsonProperty("measure")
     private Measure measure;
+    /**
+     * <p>Original spec-file type: Range</p>
+     * 
+     * 
+     */
+    @JsonProperty("range")
+    private Range range;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("title")
@@ -102,6 +110,31 @@ public class Measurement {
         return this;
     }
 
+    /**
+     * <p>Original spec-file type: Range</p>
+     * 
+     * 
+     */
+    @JsonProperty("range")
+    public Range getRange() {
+        return range;
+    }
+
+    /**
+     * <p>Original spec-file type: Range</p>
+     * 
+     * 
+     */
+    @JsonProperty("range")
+    public void setRange(Range range) {
+        this.range = range;
+    }
+
+    public Measurement withRange(Range range) {
+        this.range = range;
+        return this;
+    }
+
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
@@ -114,7 +147,7 @@ public class Measurement {
 
     @Override
     public String toString() {
-        return ((((((((("Measurement"+" [title=")+ title)+", description=")+ description)+", measure=")+ measure)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((("Measurement"+" [title=")+ title)+", description=")+ description)+", measure=")+ measure)+", range=")+ range)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

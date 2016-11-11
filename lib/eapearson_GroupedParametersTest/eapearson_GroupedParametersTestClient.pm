@@ -352,6 +352,7 @@ Measurement is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
 	measure has a value which is an eapearson_GroupedParametersTest.Measure
+	range has a value which is an eapearson_GroupedParametersTest.Range
 Measure is a reference to a hash where the following keys are defined:
 	measure_label has a value which is a string
 	measure_description has a value which is a string
@@ -359,6 +360,9 @@ Measure is a reference to a hash where the following keys are defined:
 	measure_float has a value which is a float
 	measure_bool has a value which is an int
 	measure_type has a value which is a string
+Range is a reference to a hash where the following keys are defined:
+	range_min has a value which is an int
+	range_max has a value which is an int
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -375,6 +379,7 @@ Measurement is a reference to a hash where the following keys are defined:
 	title has a value which is a string
 	description has a value which is a string
 	measure has a value which is an eapearson_GroupedParametersTest.Measure
+	range has a value which is an eapearson_GroupedParametersTest.Range
 Measure is a reference to a hash where the following keys are defined:
 	measure_label has a value which is a string
 	measure_description has a value which is a string
@@ -382,6 +387,9 @@ Measure is a reference to a hash where the following keys are defined:
 	measure_float has a value which is a float
 	measure_bool has a value which is an int
 	measure_type has a value which is a string
+Range is a reference to a hash where the following keys are defined:
+	range_min has a value which is an int
+	range_max has a value which is an int
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -947,6 +955,38 @@ measure_type has a value which is a string
 
 
 
+=head2 Range
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+range_min has a value which is an int
+range_max has a value which is an int
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+range_min has a value which is an int
+range_max has a value which is an int
+
+
+=end text
+
+=back
+
+
+
 =head2 Measurement
 
 =over 4
@@ -962,6 +1002,7 @@ a reference to a hash where the following keys are defined:
 title has a value which is a string
 description has a value which is a string
 measure has a value which is an eapearson_GroupedParametersTest.Measure
+range has a value which is an eapearson_GroupedParametersTest.Range
 
 </pre>
 
@@ -973,6 +1014,7 @@ a reference to a hash where the following keys are defined:
 title has a value which is a string
 description has a value which is a string
 measure has a value which is an eapearson_GroupedParametersTest.Measure
+range has a value which is an eapearson_GroupedParametersTest.Range
 
 
 =end text

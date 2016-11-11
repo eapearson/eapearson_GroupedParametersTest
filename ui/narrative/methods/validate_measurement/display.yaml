@@ -61,12 +61,25 @@ parameters :
         ui-name: Dropdown
         short-hint: Dropdown
         long-hint: Dropdown
+    range_min:
+        ui-name: Min
+        short-hint: Min
+        long-hint: Min
+    range_max:
+        ui-name: Max
+        short-hint: Max
+        long-hint: Max
+    
 
 parameter-groups:
     measure: 
         ui-name: Measure
         short-hint: Measure
         long-hint: GMeasure
+    range:
+        ui-name: Range 
+        short-hint: Range
+        long-hint: Range
 
 
 description : |

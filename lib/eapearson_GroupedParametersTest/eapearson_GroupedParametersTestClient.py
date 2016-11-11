@@ -76,7 +76,8 @@ class eapearson_GroupedParametersTest(object):
            of String, parameter "measure_description" of String, parameter
            "measure_int" of Long, parameter "measure_float" of Double,
            parameter "measure_bool" of Long, parameter "measure_type" of
-           String
+           String, parameter "range" of type "Range" -> structure: parameter
+           "range_min" of Long, parameter "range_max" of Long
         :returns: instance of type "TestResults" -> structure: parameter
            "status" of String, parameter "detail" of String
         """

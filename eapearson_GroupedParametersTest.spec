@@ -100,9 +100,15 @@ module eapearson_GroupedParametersTest {
     } Measure;
 
     typedef structure {
+        int range_min;
+        int range_max;
+    } Range;
+
+    typedef structure {
         string title;
         string description;
         Measure measure;
+        Range range;
     } Measurement;
 
     /* Functions */
