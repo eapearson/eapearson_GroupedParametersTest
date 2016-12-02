@@ -72,7 +72,7 @@
         },
         {
             "id": "integerParam",
-            "default_values": ["0"],
+            "default_values": [""],
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
@@ -85,7 +85,7 @@
         },
         {
             "id": "floatParam",
-            "default_values": ["0"],
+            "default_values": [""],
             "optional": false,
             "advanced": false,
             "allow_multiple": false,

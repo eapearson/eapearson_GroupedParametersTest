@@ -63,4 +63,4 @@ parameters :
         long-hint: autocompleteParam
 
 description : |
-    <p>Method to accept and validate a variety of parameters in groups.</p>
+    <p>Excercises all parameter types in one app</p>

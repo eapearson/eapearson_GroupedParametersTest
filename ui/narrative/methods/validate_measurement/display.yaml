@@ -1,10 +1,10 @@
 #
 # define display information
 #
-name: Validate Many Parameter Types
+name: Validate A Measurement
 
 tooltip: |
-    Validates many parameter types
+    Validates a "measurement"
 
 screenshots: []
 
@@ -83,4 +83,4 @@ parameter-groups:
 
 
 description : |
-    <p>Method to accept and validate a variety of parameters in groups.</p>
+    <p>Uses a fake measurement type to excercise several parameter types.</p>
