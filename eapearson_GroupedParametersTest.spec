@@ -84,7 +84,7 @@ module eapearson_GroupedParametersTest {
         string detail;
     } TestResults;
 
-    /* Now, just a few flat groups */
+    /* Now; just a few flat groups */
 
     /* Measurement 
        We use this to test all parameter types.
@@ -111,6 +111,28 @@ module eapearson_GroupedParametersTest {
         Range range;
     } Measurement;
 
+    typedef structure {
+        string stringParam;
+        string textareaParam;
+        string dropdownParam;
+        int booleanParam;
+        int integerParam;
+        float floatParam;
+        string objectRefParam;
+        string autocompleteParam;
+    } AllParamTypes;
+
+    typedef structure {
+        list<string> stringParam;
+        list<string> textareaParam;
+        list<string> dropdownParam;
+        list<int> booleanParam;
+        list<int> integerParam;
+        list<float> floatParam;
+        list<string> objectRefParam;
+        list<string> autocompleteParam;
+    } AllSequenceTypes;
+
     /* Functions */
 
     funcdef validate_contact(Contact contact)
@@ -120,6 +142,9 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_measurement(Measurement)
+        returns (TestResults result) authentication required;
+
+    funcdef validate_all_params(AllParamTypes)
         returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)

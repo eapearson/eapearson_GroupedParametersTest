@@ -1,0 +1,66 @@
+#
+# define display information
+#
+name: Validate Many Parameter Types
+
+tooltip: |
+    Validates many parameter types
+
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    stringParam:
+        ui-name: stringParam
+        short-hint: stringParam
+        long-hint: stringParam
+    textareaParam:
+        ui-name: textareaParam
+        short-hint: textareaParam
+        long-hint: textareaParam
+    dropdownParam:
+        ui-name: dropdownParam
+        short-hint: dropdownParam
+        long-hint: dropdownParam
+    integerParam:
+        ui-name: integerParam
+        short-hint: integerParam
+        long-hint: integerParam
+    floatParam:
+        ui-name: floatParam
+        short-hint: floatParam
+        long-hint: floatParam
+    booleanParam:
+        ui-name: booleanParam
+        short-hint: booleanParam
+        long-hint: booleanParam
+    objectRefParam:
+        ui-name: objectRefParam
+        short-hint: objectRefParam
+        long-hint: objectRefParam
+    autocompleteParam:
+        ui-name: autocompleteParam
+        short-hint: autocompleteParam
+        long-hint: autocompleteParam
+
+description : |
+    <p>Method to accept and validate a variety of parameters in groups.</p>
