@@ -15,7 +15,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -27,7 +27,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "textarea",
             "text_options": {
                 "n_rows": 10,
@@ -40,7 +40,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "dropdown",
             "dropdown_options": {
                 "options": [{
@@ -63,7 +63,7 @@
             "default_values": ["1"],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "checkbox",
             "checkbox_options": {
                 "checked_value": "1",
@@ -75,7 +75,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "text",
             "text_options": {
                 "validate_as": "int",
@@ -88,7 +88,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "text",
             "text_options": {
                 "validate_as": "float",
@@ -101,7 +101,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "text",
             "text_options": {
                 "valid_ws_types": [
@@ -115,7 +115,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "field_type": "autocomplete",
             "text_options": {}
         }
@@ -126,7 +126,7 @@
         "service-mapping": {
             "url": "",
             "name": "eapearson_GroupedParametersTest",
-            "method": "validate_all_params",
+            "method": "validate_all_seq_params",
             "input_mapping": [{
                     "input_parameter": "stringParam",
                     "target_property": "stringParam",

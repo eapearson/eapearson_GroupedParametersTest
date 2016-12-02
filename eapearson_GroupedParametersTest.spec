@@ -147,6 +147,9 @@ module eapearson_GroupedParametersTest {
     funcdef validate_all_params(AllParamTypes)
         returns (TestResults result) authentication required;
 
+    funcdef validate_all_seq_params(AllSequenceTypes)
+        returns (TestResults result) authentication required;
+
     /*funcdef validate_checklist(CarChecklist checklist)
         returns (UnspecifiedObject result) authentication required;*/
 };
