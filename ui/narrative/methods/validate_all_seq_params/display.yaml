@@ -41,10 +41,10 @@ parameters :
         ui-name: textareaParam
         short-hint: textareaParam
         long-hint: textareaParam
-    textareaParamWWithDefault:
-        ui-name: textareaParamWWithDefault
-        short-hint: textareaParamWWithDefault
-        long-hint: textareaParamWWithDefault
+    textareaParamWithDefault:
+        ui-name: textareaParamWithDefault
+        short-hint: textareaParamWithDefault
+        long-hint: textareaParamWithDefault
     dropdownParam:
         ui-name: dropdownParam
         short-hint: dropdownParam
