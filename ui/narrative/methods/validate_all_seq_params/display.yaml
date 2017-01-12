@@ -41,6 +41,10 @@ parameters :
         ui-name: dropdownParam
         short-hint: dropdownParam
         long-hint: dropdownParam
+    dropdownParamWithDefault:
+        ui-name: dropdownParamWithDefault
+        short-hint: dropdownParamWithDefault
+        long-hint: dropdownParamWithDefault
     integerParam:
         ui-name: integerParam
         short-hint: integerParam
