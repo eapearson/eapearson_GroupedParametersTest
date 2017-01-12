@@ -23,8 +23,33 @@
             }
         },
         {
+            "id": "stringParamWithDefault",
+            "default_values": ["my default value"],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
             "id": "textareaParam",
             "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "textarea",
+            "text_options": {
+                "n_rows": 10,
+                "min_length": 10,
+                "max_length": 1000
+            }
+        },
+         {
+            "id": "textareaParamWithDefault",
+            "default_values": ["this is another default"],
             "optional": false,
             "advanced": false,
             "allow_multiple": true,
@@ -83,7 +108,7 @@
         },
         {
             "id": "booleanParam",
-            "default_values": ["1"],
+            "default_values": [""],
             "optional": false,
             "advanced": false,
             "allow_multiple": true,
@@ -93,6 +118,18 @@
                 "unchecked_value": "0"
             }
         },
+{
+            "id": "booleanParamWithDefault",
+            "default_values": ["1"],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "checkbox",
+            "checkbox_options": {
+                "checked_value": "1",
+                "unchecked_value": "0"
+            }
+        },        
         {
             "id": "integerParam",
             "default_values": [""],
@@ -106,9 +143,35 @@
                 "max_int": 5
             }
         },
+         {
+            "id": "integerParamWithDefault",
+            "default_values": ["3"],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_int": 1,
+                "max_int": 5
+            }
+        },
         {
             "id": "floatParam",
             "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "float",
+                "min_float": -100,
+                "max_float": 100
+            }
+        },
+         {
+            "id": "floatParamWithDefault",
+            "default_values": ["12.345"],
             "optional": false,
             "advanced": false,
             "allow_multiple": true,

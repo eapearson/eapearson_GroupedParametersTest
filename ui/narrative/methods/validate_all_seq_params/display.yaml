@@ -33,10 +33,18 @@ parameters :
         ui-name: stringParam
         short-hint: stringParam
         long-hint: stringParam
+    stringParamWithDefault:
+        ui-name: stringParamWithDefault
+        short-hint: stringParamWithDefault
+        long-hint: stringParamWithDefault
     textareaParam:
         ui-name: textareaParam
         short-hint: textareaParam
         long-hint: textareaParam
+    textareaParamWithParam:
+        ui-name: textareaParamWithParam
+        short-hint: textareaParamWithParam
+        long-hint: textareaParamWithParam
     dropdownParam:
         ui-name: dropdownParam
         short-hint: dropdownParam
@@ -49,14 +57,26 @@ parameters :
         ui-name: integerParam
         short-hint: integerParam
         long-hint: integerParam
+    integerParamWithDefault:
+        ui-name: integerParamWithDefault
+        short-hint: integerParamWithDefault
+        long-hint: integerParamWithDefault
     floatParam:
         ui-name: floatParam
         short-hint: floatParam
         long-hint: floatParam
+    floatParamWithDefault:
+        ui-name: floatParamWithDefault
+        short-hint: floatParamWithDefault
+        long-hint: floatParamWithDefault
     booleanParam:
         ui-name: booleanParam
         short-hint: booleanParam
         long-hint: booleanParam
+    booleanParamWithDefault:
+        ui-name: booleanParamWithDefault
+        short-hint: booleanParamWithDefault
+        long-hint: booleanParamWithDefault
     objectRefParam:
         ui-name: objectRefParam
         short-hint: objectRefParam
