@@ -59,6 +59,29 @@
             }
         },
         {
+            "id": "dropdownParamWithDefault",
+            "default_values": ["value2"],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "dropdown",
+            "dropdown_options": {
+                "options": [{
+                        "display": "Value 1",
+                        "value": "value1"
+                    },
+                    {
+                        "display": "Value 2",
+                        "value": "value2"
+                    },
+                    {
+                        "display": "Value 3",
+                        "value": "value3"
+                    }
+                ]
+            }
+        },
+        {
             "id": "booleanParam",
             "default_values": ["1"],
             "optional": false,
