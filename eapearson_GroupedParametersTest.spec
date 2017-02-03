@@ -134,6 +134,14 @@ module eapearson_GroupedParametersTest {
         list<string> autocompleteParam;
     } AllSequenceTypes;
 
+    typedef structure {
+
+    } EmptyGroup;
+
+    typedef structure {
+        EmptyGroup group1;
+    } EmptyParamGroupInput;
+
     /* Functions */
 
     funcdef validate_contact(Contact contact)
@@ -149,6 +157,9 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_all_seq_params(AllSequenceTypes)
+        returns (TestResults result) authentication required;
+
+    funcdef validate_empty_param_group(EmptyParamGroupInput input)
         returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)

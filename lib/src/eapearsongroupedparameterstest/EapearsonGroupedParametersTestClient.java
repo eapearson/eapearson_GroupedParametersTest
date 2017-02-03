@@ -248,6 +248,23 @@ public class EapearsonGroupedParametersTestClient {
         return res.get(0);
     }
 
+    /**
+     * <p>Original spec-file function name: validate_empty_param_group</p>
+     * <pre>
+     * </pre>
+     * @param   input   instance of type {@link eapearsongroupedparameterstest.EmptyParamGroupInput EmptyParamGroupInput}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     * @throws IOException if an IO exception occurs
+     * @throws JsonClientException if a JSON RPC exception occurs
+     */
+    public TestResults validateEmptyParamGroup(EmptyParamGroupInput input, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+        List<Object> args = new ArrayList<Object>();
+        args.add(input);
+        TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
+        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_empty_param_group", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        return res.get(0);
+    }
+
     public Map<String, Object> status(RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         TypeReference<List<Map<String, Object>>> retType = new TypeReference<List<Map<String, Object>>>() {};

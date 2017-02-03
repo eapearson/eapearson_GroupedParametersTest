@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "725c8a6dde981c90aad3efbccff6f647f7a70f4d";
+    private static final String gitCommitHash = "0f6c674a469dce8f1797b03926302fbc497e013e";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -112,6 +112,21 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         TestResults returnVal = null;
         //BEGIN validate_all_seq_params
         //END validate_all_seq_params
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_empty_param_group</p>
+     * <pre>
+     * </pre>
+     * @param   input   instance of type {@link eapearsongroupedparameterstest.EmptyParamGroupInput EmptyParamGroupInput}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_empty_param_group", async=true)
+    public TestResults validateEmptyParamGroup(EmptyParamGroupInput input, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN validate_empty_param_group
+        //END validate_empty_param_group
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")

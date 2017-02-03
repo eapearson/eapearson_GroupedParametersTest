@@ -665,6 +665,100 @@ TestResults is a reference to a hash where the following keys are defined:
     }
 }
  
+
+
+=head2 validate_empty_param_group
+
+  $result = $obj->validate_empty_param_group($input)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$input is an eapearson_GroupedParametersTest.EmptyParamGroupInput
+$result is an eapearson_GroupedParametersTest.TestResults
+EmptyParamGroupInput is a reference to a hash where the following keys are defined:
+	group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
+EmptyGroup is a reference to a hash where the following keys are defined
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$input is an eapearson_GroupedParametersTest.EmptyParamGroupInput
+$result is an eapearson_GroupedParametersTest.TestResults
+EmptyParamGroupInput is a reference to a hash where the following keys are defined:
+	group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
+EmptyGroup is a reference to a hash where the following keys are defined
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub validate_empty_param_group
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function validate_empty_param_group (received $n, expecting 1)");
+    }
+    {
+	my($input) = @args;
+
+	my @_bad_arguments;
+        (ref($input) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"input\" (value was \"$input\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to validate_empty_param_group:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'validate_empty_param_group');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.validate_empty_param_group",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'validate_empty_param_group',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_empty_param_group",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'validate_empty_param_group',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -708,16 +802,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_all_seq_params',
+                method_name => 'validate_empty_param_group',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_all_seq_params",
+            error => "Error invoking method validate_empty_param_group",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_all_seq_params',
+            method_name => 'validate_empty_param_group',
         );
     }
 }
@@ -1319,6 +1413,62 @@ integerParam has a value which is a reference to a list where each element is an
 floatParam has a value which is a reference to a list where each element is a float
 objectRefParam has a value which is a reference to a list where each element is a string
 autocompleteParam has a value which is a reference to a list where each element is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 EmptyGroup
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined
+
+=end text
+
+=back
+
+
+
+=head2 EmptyParamGroupInput
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
 
 
 =end text

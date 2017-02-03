@@ -116,6 +116,17 @@ class eapearson_GroupedParametersTest(object):
             'eapearson_GroupedParametersTest.validate_all_seq_params',
             [AllSequenceTypes], self._service_ver, context)
 
+    def validate_empty_param_group(self, input, context=None):
+        """
+        :param input: instance of type "EmptyParamGroupInput" -> structure:
+           parameter "group1" of type "EmptyGroup" -> structure:
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_empty_param_group',
+            [input], self._service_ver, context)
+
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',
                                         [], self._service_ver, context)

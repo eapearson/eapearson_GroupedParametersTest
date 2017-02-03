@@ -1,0 +1,61 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "help@kbase.us",
+    "categories": [
+        "active"
+    ],
+    "app_type": "app",
+    "widgets": {
+        "input": null,
+        "output": "no-display"
+    },
+    "parameters": [    
+        {
+            "id": "param1",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [
+                ""
+            ],
+            "field_type": "text",
+            "text_options": {}
+        }    
+    ],
+    "parameter-groups": [
+        {
+            "id": "group1",
+            "parameters": [
+            ],
+            "optional": false,
+            "allow_multiple": false,
+            "with_border": true
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearson_GroupedParametersTest",
+            "method": "validate_empty_param_group",
+            "input_mapping": [
+                {
+                    "input_parameter": "group1",
+                    "target_property": "group1",
+                    "target_argument_position": 0
+                }
+            ],
+            "output_mapping": [
+                {
+                    "service_method_output_path": [
+                        0
+                    ],
+                    "target_property": "results"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
