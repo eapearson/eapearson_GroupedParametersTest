@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "8b62b2bd867cb0ad0bdcc18a63e24d08287874f8";
+    private static final String gitCommitHash = "725c8a6dde981c90aad3efbccff6f647f7a70f4d";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -82,6 +82,36 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         TestResults returnVal = null;
         //BEGIN validate_measurement
         //END validate_measurement
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_all_params</p>
+     * <pre>
+     * </pre>
+     * @param   arg1   instance of type {@link eapearsongroupedparameterstest.AllParamTypes AllParamTypes}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_all_params", async=true)
+    public TestResults validateAllParams(AllParamTypes arg1, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN validate_all_params
+        //END validate_all_params
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: validate_all_seq_params</p>
+     * <pre>
+     * </pre>
+     * @param   arg1   instance of type {@link eapearsongroupedparameterstest.AllSequenceTypes AllSequenceTypes}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_all_seq_params", async=true)
+    public TestResults validateAllSeqParams(AllSequenceTypes arg1, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN validate_all_seq_params
+        //END validate_all_seq_params
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")

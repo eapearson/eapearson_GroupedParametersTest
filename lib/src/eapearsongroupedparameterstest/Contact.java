@@ -23,7 +23,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "first_name",
     "last_name",
     "address",
-    "phones"
+    "phones",
+    "comment"
 })
 public class Contact {
 
@@ -42,6 +43,8 @@ public class Contact {
     private Address address;
     @JsonProperty("phones")
     private List<Phone> phones;
+    @JsonProperty("comment")
+    private String comment;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("first_name")
@@ -118,6 +121,21 @@ public class Contact {
         return this;
     }
 
+    @JsonProperty("comment")
+    public String getComment() {
+        return comment;
+    }
+
+    @JsonProperty("comment")
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Contact withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
@@ -130,7 +148,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return ((((((((((("Contact"+" [firstName=")+ firstName)+", lastName=")+ lastName)+", address=")+ address)+", phones=")+ phones)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((("Contact"+" [firstName=")+ firstName)+", lastName=")+ lastName)+", address=")+ address)+", phones=")+ phones)+", comment=")+ comment)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

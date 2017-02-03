@@ -385,6 +385,20 @@
             "text_options": {
                 "max_length": 1000
             }
+        },
+
+        {
+            "id": "comment",
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [
+                ""
+            ],
+            "field_type": "textarea",
+            "text_options": {
+                "max_length": 4000
+            }
         }
     ],
     "parameter-groups": [
@@ -437,6 +451,11 @@
                 {
                     "input_parameter": "phones",
                     "target_property": "phones",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "comment",
+                    "target_property": "comment",
                     "target_argument_position": 0
                 }
             ],

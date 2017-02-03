@@ -127,6 +127,7 @@ Contact is a reference to a hash where the following keys are defined:
 	last_name has a value which is a string
 	address has a value which is an eapearson_GroupedParametersTest.Address
 	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
+	comment has a value which is a string
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
 	city has a value which is a string
@@ -154,6 +155,7 @@ Contact is a reference to a hash where the following keys are defined:
 	last_name has a value which is a string
 	address has a value which is an eapearson_GroupedParametersTest.Address
 	phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
+	comment has a value which is a string
 Address is a reference to a hash where the following keys are defined:
 	street_address has a value which is a string
 	city has a value which is a string
@@ -451,6 +453,218 @@ TestResults is a reference to a hash where the following keys are defined:
     }
 }
  
+
+
+=head2 validate_all_params
+
+  $result = $obj->validate_all_params($AllParamTypes)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$AllParamTypes is an eapearson_GroupedParametersTest.AllParamTypes
+$result is an eapearson_GroupedParametersTest.TestResults
+AllParamTypes is a reference to a hash where the following keys are defined:
+	stringParam has a value which is a string
+	textareaParam has a value which is a string
+	dropdownParam has a value which is a string
+	booleanParam has a value which is an int
+	integerParam has a value which is an int
+	floatParam has a value which is a float
+	objectRefParam has a value which is a string
+	autocompleteParam has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$AllParamTypes is an eapearson_GroupedParametersTest.AllParamTypes
+$result is an eapearson_GroupedParametersTest.TestResults
+AllParamTypes is a reference to a hash where the following keys are defined:
+	stringParam has a value which is a string
+	textareaParam has a value which is a string
+	dropdownParam has a value which is a string
+	booleanParam has a value which is an int
+	integerParam has a value which is an int
+	floatParam has a value which is a float
+	objectRefParam has a value which is a string
+	autocompleteParam has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub validate_all_params
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function validate_all_params (received $n, expecting 1)");
+    }
+    {
+	my($AllParamTypes) = @args;
+
+	my @_bad_arguments;
+        (ref($AllParamTypes) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"AllParamTypes\" (value was \"$AllParamTypes\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to validate_all_params:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'validate_all_params');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.validate_all_params",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'validate_all_params',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_all_params",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'validate_all_params',
+				       );
+    }
+}
+ 
+
+
+=head2 validate_all_seq_params
+
+  $result = $obj->validate_all_seq_params($AllSequenceTypes)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$AllSequenceTypes is an eapearson_GroupedParametersTest.AllSequenceTypes
+$result is an eapearson_GroupedParametersTest.TestResults
+AllSequenceTypes is a reference to a hash where the following keys are defined:
+	stringParam has a value which is a reference to a list where each element is a string
+	textareaParam has a value which is a reference to a list where each element is a string
+	dropdownParam has a value which is a reference to a list where each element is a string
+	booleanParam has a value which is a reference to a list where each element is an int
+	integerParam has a value which is a reference to a list where each element is an int
+	floatParam has a value which is a reference to a list where each element is a float
+	objectRefParam has a value which is a reference to a list where each element is a string
+	autocompleteParam has a value which is a reference to a list where each element is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$AllSequenceTypes is an eapearson_GroupedParametersTest.AllSequenceTypes
+$result is an eapearson_GroupedParametersTest.TestResults
+AllSequenceTypes is a reference to a hash where the following keys are defined:
+	stringParam has a value which is a reference to a list where each element is a string
+	textareaParam has a value which is a reference to a list where each element is a string
+	dropdownParam has a value which is a reference to a list where each element is a string
+	booleanParam has a value which is a reference to a list where each element is an int
+	integerParam has a value which is a reference to a list where each element is an int
+	floatParam has a value which is a reference to a list where each element is a float
+	objectRefParam has a value which is a reference to a list where each element is a string
+	autocompleteParam has a value which is a reference to a list where each element is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub validate_all_seq_params
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function validate_all_seq_params (received $n, expecting 1)");
+    }
+    {
+	my($AllSequenceTypes) = @args;
+
+	my @_bad_arguments;
+        (ref($AllSequenceTypes) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"AllSequenceTypes\" (value was \"$AllSequenceTypes\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to validate_all_seq_params:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'validate_all_seq_params');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.validate_all_seq_params",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'validate_all_seq_params',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_all_seq_params",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'validate_all_seq_params',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -494,16 +708,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_measurement',
+                method_name => 'validate_all_seq_params',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_measurement",
+            error => "Error invoking method validate_all_seq_params",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_measurement',
+            method_name => 'validate_all_seq_params',
         );
     }
 }
@@ -633,6 +847,7 @@ first_name has a value which is a string
 last_name has a value which is a string
 address has a value which is an eapearson_GroupedParametersTest.Address
 phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
+comment has a value which is a string
 
 </pre>
 
@@ -645,6 +860,7 @@ first_name has a value which is a string
 last_name has a value which is a string
 address has a value which is an eapearson_GroupedParametersTest.Address
 phones has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Phone
+comment has a value which is a string
 
 
 =end text
@@ -1015,6 +1231,94 @@ title has a value which is a string
 description has a value which is a string
 measure has a value which is an eapearson_GroupedParametersTest.Measure
 range has a value which is an eapearson_GroupedParametersTest.Range
+
+
+=end text
+
+=back
+
+
+
+=head2 AllParamTypes
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParam has a value which is a string
+textareaParam has a value which is a string
+dropdownParam has a value which is a string
+booleanParam has a value which is an int
+integerParam has a value which is an int
+floatParam has a value which is a float
+objectRefParam has a value which is a string
+autocompleteParam has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParam has a value which is a string
+textareaParam has a value which is a string
+dropdownParam has a value which is a string
+booleanParam has a value which is an int
+integerParam has a value which is an int
+floatParam has a value which is a float
+objectRefParam has a value which is a string
+autocompleteParam has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 AllSequenceTypes
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParam has a value which is a reference to a list where each element is a string
+textareaParam has a value which is a reference to a list where each element is a string
+dropdownParam has a value which is a reference to a list where each element is a string
+booleanParam has a value which is a reference to a list where each element is an int
+integerParam has a value which is a reference to a list where each element is an int
+floatParam has a value which is a reference to a list where each element is a float
+objectRefParam has a value which is a reference to a list where each element is a string
+autocompleteParam has a value which is a reference to a list where each element is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParam has a value which is a reference to a list where each element is a string
+textareaParam has a value which is a reference to a list where each element is a string
+dropdownParam has a value which is a reference to a list where each element is a string
+booleanParam has a value which is a reference to a list where each element is an int
+integerParam has a value which is a reference to a list where each element is an int
+floatParam has a value which is a reference to a list where each element is a float
+objectRefParam has a value which is a reference to a list where each element is a string
+autocompleteParam has a value which is a reference to a list where each element is a string
 
 
 =end text

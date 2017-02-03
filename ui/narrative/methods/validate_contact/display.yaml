@@ -75,6 +75,10 @@ parameters :
         ui-name: Phone Comments
         short-hint: The phone Comments
         long-hint: Comments about this phone number.
+    comment:
+        ui-name: Comments
+        short-hint: Comments
+        long-hint: Comments
 
 parameter-groups:
     address: 

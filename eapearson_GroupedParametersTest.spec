@@ -28,6 +28,7 @@ module eapearson_GroupedParametersTest {
         string last_name;
         Address address;
         list<Phone> phones;
+        string comment;
     } Contact;
 
 

@@ -44,7 +44,7 @@ class eapearson_GroupedParametersTest(object):
            parameter "postal_code" of String, parameter "country" of String,
            parameter "phones" of list of type "Phone" -> structure: parameter
            "phone_type" of String, parameter "phone_number" of String,
-           parameter "phone_comments" of String
+           parameter "phone_comments" of String, parameter "comment" of String
         :returns: instance of type "TestResults" -> structure: parameter
            "status" of String, parameter "detail" of String
         """
@@ -84,6 +84,37 @@ class eapearson_GroupedParametersTest(object):
         return self._client.call_method(
             'eapearson_GroupedParametersTest.validate_measurement',
             [Measurement], self._service_ver, context)
+
+    def validate_all_params(self, AllParamTypes, context=None):
+        """
+        :param AllParamTypes: instance of type "AllParamTypes" -> structure:
+           parameter "stringParam" of String, parameter "textareaParam" of
+           String, parameter "dropdownParam" of String, parameter
+           "booleanParam" of Long, parameter "integerParam" of Long,
+           parameter "floatParam" of Double, parameter "objectRefParam" of
+           String, parameter "autocompleteParam" of String
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_all_params',
+            [AllParamTypes], self._service_ver, context)
+
+    def validate_all_seq_params(self, AllSequenceTypes, context=None):
+        """
+        :param AllSequenceTypes: instance of type "AllSequenceTypes" ->
+           structure: parameter "stringParam" of list of String, parameter
+           "textareaParam" of list of String, parameter "dropdownParam" of
+           list of String, parameter "booleanParam" of list of Long,
+           parameter "integerParam" of list of Long, parameter "floatParam"
+           of list of Double, parameter "objectRefParam" of list of String,
+           parameter "autocompleteParam" of list of String
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_all_seq_params',
+            [AllSequenceTypes], self._service_ver, context)
 
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',
