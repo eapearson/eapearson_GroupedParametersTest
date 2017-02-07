@@ -39,7 +39,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -49,9 +49,9 @@
         {
             "id": "stringParamOptionalGroup1",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -62,9 +62,9 @@
         {
             "id": "stringParamOptional1Group2",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -74,9 +74,9 @@
         {
             "id": "stringParamOptional2Group2",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -88,7 +88,7 @@
             "default_values": [""],
             "optional": false,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -98,9 +98,9 @@
         {
             "id": "stringParamOptionalGroup3",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -111,9 +111,9 @@
         {
             "id": "stringParamOptional1Group4",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
@@ -123,9 +123,9 @@
         {
             "id": "stringParamOptional2Group4",
             "default_values": [""],
-            "optional": false,
+            "optional": true,
             "advanced": false,
-            "allow_multiple": true,
+            "allow_multiple": false,
             "field_type": "text",
             "text_options": {
                 "min_length": 1,
