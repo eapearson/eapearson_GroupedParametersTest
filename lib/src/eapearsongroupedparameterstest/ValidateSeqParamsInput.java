@@ -22,10 +22,10 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "stringParamRequired",
     "stringParamOptional",
-    "group1",
-    "group2",
-    "group3",
-    "group4"
+    "groupOptional1",
+    "groupOptional2",
+    "groupRequired1",
+    "groupRequired2"
 })
 public class ValidateSeqParamsInput {
 
@@ -33,14 +33,14 @@ public class ValidateSeqParamsInput {
     private List<String> stringParamRequired;
     @JsonProperty("stringParamOptional")
     private List<String> stringParamOptional;
-    @JsonProperty("group1")
-    private List<Group1> group1;
-    @JsonProperty("group2")
-    private List<Group2> group2;
-    @JsonProperty("group3")
-    private List<Group3> group3;
-    @JsonProperty("group4")
-    private List<Group4> group4;
+    @JsonProperty("groupOptional1")
+    private List<GroupOptional1> groupOptional1;
+    @JsonProperty("groupOptional2")
+    private List<GroupOptional2> groupOptional2;
+    @JsonProperty("groupRequired1")
+    private List<GroupRequired1> groupRequired1;
+    @JsonProperty("groupRequired2")
+    private List<GroupRequired2> groupRequired2;
     private Map<java.lang.String, Object> additionalProperties = new HashMap<java.lang.String, Object>();
 
     @JsonProperty("stringParamRequired")
@@ -73,63 +73,63 @@ public class ValidateSeqParamsInput {
         return this;
     }
 
-    @JsonProperty("group1")
-    public List<Group1> getGroup1() {
-        return group1;
+    @JsonProperty("groupOptional1")
+    public List<GroupOptional1> getGroupOptional1() {
+        return groupOptional1;
     }
 
-    @JsonProperty("group1")
-    public void setGroup1(List<Group1> group1) {
-        this.group1 = group1;
+    @JsonProperty("groupOptional1")
+    public void setGroupOptional1(List<GroupOptional1> groupOptional1) {
+        this.groupOptional1 = groupOptional1;
     }
 
-    public ValidateSeqParamsInput withGroup1(List<Group1> group1) {
-        this.group1 = group1;
+    public ValidateSeqParamsInput withGroupOptional1(List<GroupOptional1> groupOptional1) {
+        this.groupOptional1 = groupOptional1;
         return this;
     }
 
-    @JsonProperty("group2")
-    public List<Group2> getGroup2() {
-        return group2;
+    @JsonProperty("groupOptional2")
+    public List<GroupOptional2> getGroupOptional2() {
+        return groupOptional2;
     }
 
-    @JsonProperty("group2")
-    public void setGroup2(List<Group2> group2) {
-        this.group2 = group2;
+    @JsonProperty("groupOptional2")
+    public void setGroupOptional2(List<GroupOptional2> groupOptional2) {
+        this.groupOptional2 = groupOptional2;
     }
 
-    public ValidateSeqParamsInput withGroup2(List<Group2> group2) {
-        this.group2 = group2;
+    public ValidateSeqParamsInput withGroupOptional2(List<GroupOptional2> groupOptional2) {
+        this.groupOptional2 = groupOptional2;
         return this;
     }
 
-    @JsonProperty("group3")
-    public List<Group3> getGroup3() {
-        return group3;
+    @JsonProperty("groupRequired1")
+    public List<GroupRequired1> getGroupRequired1() {
+        return groupRequired1;
     }
 
-    @JsonProperty("group3")
-    public void setGroup3(List<Group3> group3) {
-        this.group3 = group3;
+    @JsonProperty("groupRequired1")
+    public void setGroupRequired1(List<GroupRequired1> groupRequired1) {
+        this.groupRequired1 = groupRequired1;
     }
 
-    public ValidateSeqParamsInput withGroup3(List<Group3> group3) {
-        this.group3 = group3;
+    public ValidateSeqParamsInput withGroupRequired1(List<GroupRequired1> groupRequired1) {
+        this.groupRequired1 = groupRequired1;
         return this;
     }
 
-    @JsonProperty("group4")
-    public List<Group4> getGroup4() {
-        return group4;
+    @JsonProperty("groupRequired2")
+    public List<GroupRequired2> getGroupRequired2() {
+        return groupRequired2;
     }
 
-    @JsonProperty("group4")
-    public void setGroup4(List<Group4> group4) {
-        this.group4 = group4;
+    @JsonProperty("groupRequired2")
+    public void setGroupRequired2(List<GroupRequired2> groupRequired2) {
+        this.groupRequired2 = groupRequired2;
     }
 
-    public ValidateSeqParamsInput withGroup4(List<Group4> group4) {
-        this.group4 = group4;
+    public ValidateSeqParamsInput withGroupRequired2(List<GroupRequired2> groupRequired2) {
+        this.groupRequired2 = groupRequired2;
         return this;
     }
 
@@ -145,7 +145,7 @@ public class ValidateSeqParamsInput {
 
     @Override
     public java.lang.String toString() {
-        return ((((((((((((((("ValidateSeqParamsInput"+" [stringParamRequired=")+ stringParamRequired)+", stringParamOptional=")+ stringParamOptional)+", group1=")+ group1)+", group2=")+ group2)+", group3=")+ group3)+", group4=")+ group4)+", additionalProperties=")+ additionalProperties)+"]");
+        return ((((((((((((((("ValidateSeqParamsInput"+" [stringParamRequired=")+ stringParamRequired)+", stringParamOptional=")+ stringParamOptional)+", groupOptional1=")+ groupOptional1)+", groupOptional2=")+ groupOptional2)+", groupRequired1=")+ groupRequired1)+", groupRequired2=")+ groupRequired2)+", additionalProperties=")+ additionalProperties)+"]");
     }
 
 }

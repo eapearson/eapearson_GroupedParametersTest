@@ -146,32 +146,33 @@ module eapearson_GroupedParametersTest {
 
     /* All Configurations of Sequences */
     typedef structure {
-        string stringParamRequiredGroup1;
-        string stringParamOptionalGroup1;
-    } Group1;
+        string stringParamOptional1GroupOptional1;
+        string stringParamOptional2GroupOptional1;
+    } GroupOptional1;
 
     typedef structure {
-        string stringParamOptional1Group2;
-        string stringParamOptional2Group2;
-    } Group2;
+        string stringParamRequiredGroupOptional2;
+        string stringParamOptionalGroupOptional2;
+    } GroupOptional2;
 
     typedef structure {
-        string stringParamRequiredGroup3;
-        string stringParamOptionalGroup3;
-    } Group3;
+        string stringParamOptional1GroupRequired1;
+        string stringParamOptiona2GroupRequired1;
+    } GroupRequired1;
 
     typedef structure {
-        string stringParamOptional1Group4;
-        string stringParamOptiona2Group4;
-    } Group4;
+        string stringParamRequiredGroupRequired2;
+        string stringParamOptionalGroupRequired2;
+    } GroupRequired2;
+
 
     typedef structure  {
         list<string> stringParamRequired;
         list<string> stringParamOptional;
-        list<Group1> group1;
-        list<Group2> group2;
-        list<Group3> group3;
-        list<Group4> group4;
+        list<GroupOptional1> groupOptional1;
+        list<GroupOptional2> groupOptional2;
+        list<GroupRequired1> groupRequired1;
+        list<GroupRequired2> groupRequired2;
     } ValidateSeqParamsInput;
 
     /* Functions */

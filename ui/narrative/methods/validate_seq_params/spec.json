@@ -34,8 +34,80 @@
                 "max_length": 100
             }
         },
+         {
+            "id": "stringParamOptional1GroupOptional1",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
         {
-            "id": "stringParamRequiredGroup1",
+            "id": "stringParamOptional2GroupOptional1",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamRequiredGroupOptional2",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+         {
+            "id": "stringParamOptionalGroupOptional2",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptional1GroupRequired1",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptional2GroupRequired1",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": false,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamRequiredGroupRequired2",
             "default_values": [""],
             "optional": false,
             "advanced": false,
@@ -47,81 +119,7 @@
             }
         },
         {
-            "id": "stringParamOptionalGroup1",
-            "default_values": [""],
-            "optional": true,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-
-        {
-            "id": "stringParamOptional1Group2",
-            "default_values": [""],
-            "optional": true,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-        {
-            "id": "stringParamOptional2Group2",
-            "default_values": [""],
-            "optional": true,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-        {
-            "id": "stringParamRequiredGroup3",
-            "default_values": [""],
-            "optional": false,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-        {
-            "id": "stringParamOptionalGroup3",
-            "default_values": [""],
-            "optional": true,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-
-        {
-            "id": "stringParamOptional1Group4",
-            "default_values": [""],
-            "optional": true,
-            "advanced": false,
-            "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
-                "min_length": 1,
-                "max_length": 100
-            }
-        },
-        {
-            "id": "stringParamOptional2Group4",
+            "id": "stringParamOptionalGroupRequired2",
             "default_values": [""],
             "optional": true,
             "advanced": false,
@@ -132,46 +130,45 @@
                 "max_length": 100
             }
         }
-
     ],
     "parameter-groups": [
         {
-            "id": "group1",
+            "id": "groupOptional1",
             "parameters": [
-                "stringParamRequiredGroup1",
-                "stringParamOptionalGroup1"
+                "stringParamOptional1GroupOptional1",
+                "stringParamOptional2GroupOptional1"
             ],
-            "optional": false,
+            "optional": true,
             "allow_multiple": true,
             "with_border": true
-        },
+        },          
         {
-            "id": "group2",
+            "id": "groupOptional2",
             "parameters": [
-                "stringParamOptional1Group2",
-                "stringParamOptional2Group2"
-            ],
-            "optional": false,
-            "allow_multiple": true,
-            "with_border": true
-        },
-        {
-            "id": "group3",
-            "parameters": [
-                "stringParamRequiredGroup3",
-                "stringParamOptionalGroup3"
+                "stringParamRequiredGroupOptional2",
+                "stringParamOptionalGroupOptional2"
             ],
             "optional": true,
             "allow_multiple": true,
             "with_border": true
         },
         {
-            "id": "group4",
+            "id": "groupRequired1",
             "parameters": [
-                "stringParamOptional1Group4",
-                "stringParamOptional2Group4"
+                "stringParamOptional1GroupRequired1",
+                "stringParamOptional2GroupRequired1"
             ],
-            "optional": true,
+            "optional": false,
+            "allow_multiple": true,
+            "with_border": true
+        },             
+        {
+            "id": "groupRequired2",
+            "parameters": [
+                "stringParamRequiredGroupRequired2",
+                "stringParamOptionalGroupRequired2"
+            ],
+            "optional": false,
             "allow_multiple": true,
             "with_border": true
         }
@@ -192,23 +189,23 @@
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "group1",
-                    "target_property": "group1",
+                    "input_parameter": "groupOptional1",
+                    "target_property": "groupOptional1",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "group2",
-                    "target_property": "group2",
+                    "input_parameter": "groupOptional2",
+                    "target_property": "groupOptional2",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "group3",
-                    "target_property": "group3",
+                    "input_parameter": "groupRequired1",
+                    "target_property": "groupRequired1",
                     "target_argument_position": 0
                 },
                 {
-                    "input_parameter": "group4",
-                    "target_property": "group4",
+                    "input_parameter": "groupRequired2",
+                    "target_property": "groupRequired2",
                     "target_argument_position": 0
                 }
             ],

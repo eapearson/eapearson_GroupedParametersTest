@@ -132,19 +132,20 @@ class eapearson_GroupedParametersTest(object):
         :param ValidateSeqParamsInput: instance of type
            "ValidateSeqParamsInput" -> structure: parameter
            "stringParamRequired" of list of String, parameter
-           "stringParamOptional" of list of String, parameter "group1" of
-           list of type "Group1" (All Configurations of Sequences) ->
-           structure: parameter "stringParamRequiredGroup1" of String,
-           parameter "stringParamOptionalGroup1" of String, parameter
-           "group2" of list of type "Group2" -> structure: parameter
-           "stringParamOptional1Group2" of String, parameter
-           "stringParamOptional2Group2" of String, parameter "group3" of list
-           of type "Group3" -> structure: parameter
-           "stringParamRequiredGroup3" of String, parameter
-           "stringParamOptionalGroup3" of String, parameter "group4" of list
-           of type "Group4" -> structure: parameter
-           "stringParamOptional1Group4" of String, parameter
-           "stringParamOptiona2Group4" of String
+           "stringParamOptional" of list of String, parameter
+           "groupOptional1" of list of type "GroupOptional1" (All
+           Configurations of Sequences) -> structure: parameter
+           "stringParamOptional1GroupOptional1" of String, parameter
+           "stringParamOptional2GroupOptional1" of String, parameter
+           "groupOptional2" of list of type "GroupOptional2" -> structure:
+           parameter "stringParamRequiredGroupOptional2" of String, parameter
+           "stringParamOptionalGroupOptional2" of String, parameter
+           "groupRequired1" of list of type "GroupRequired1" -> structure:
+           parameter "stringParamOptional1GroupRequired1" of String,
+           parameter "stringParamOptiona2GroupRequired1" of String, parameter
+           "groupRequired2" of list of type "GroupRequired2" -> structure:
+           parameter "stringParamRequiredGroupRequired2" of String, parameter
+           "stringParamOptionalGroupRequired2" of String
         :returns: instance of type "TestResults" -> structure: parameter
            "status" of String, parameter "detail" of String
         """

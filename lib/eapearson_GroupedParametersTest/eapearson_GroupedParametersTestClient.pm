@@ -777,22 +777,22 @@ $result is an eapearson_GroupedParametersTest.TestResults
 ValidateSeqParamsInput is a reference to a hash where the following keys are defined:
 	stringParamRequired has a value which is a reference to a list where each element is a string
 	stringParamOptional has a value which is a reference to a list where each element is a string
-	group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
-	group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
-	group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
-	group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
-Group1 is a reference to a hash where the following keys are defined:
-	stringParamRequiredGroup1 has a value which is a string
-	stringParamOptionalGroup1 has a value which is a string
-Group2 is a reference to a hash where the following keys are defined:
-	stringParamOptional1Group2 has a value which is a string
-	stringParamOptional2Group2 has a value which is a string
-Group3 is a reference to a hash where the following keys are defined:
-	stringParamRequiredGroup3 has a value which is a string
-	stringParamOptionalGroup3 has a value which is a string
-Group4 is a reference to a hash where the following keys are defined:
-	stringParamOptional1Group4 has a value which is a string
-	stringParamOptiona2Group4 has a value which is a string
+	groupOptional1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional1
+	groupOptional2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional2
+	groupRequired1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired1
+	groupRequired2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired2
+GroupOptional1 is a reference to a hash where the following keys are defined:
+	stringParamOptional1GroupOptional1 has a value which is a string
+	stringParamOptional2GroupOptional1 has a value which is a string
+GroupOptional2 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroupOptional2 has a value which is a string
+	stringParamOptionalGroupOptional2 has a value which is a string
+GroupRequired1 is a reference to a hash where the following keys are defined:
+	stringParamOptional1GroupRequired1 has a value which is a string
+	stringParamOptiona2GroupRequired1 has a value which is a string
+GroupRequired2 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroupRequired2 has a value which is a string
+	stringParamOptionalGroupRequired2 has a value which is a string
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -808,22 +808,22 @@ $result is an eapearson_GroupedParametersTest.TestResults
 ValidateSeqParamsInput is a reference to a hash where the following keys are defined:
 	stringParamRequired has a value which is a reference to a list where each element is a string
 	stringParamOptional has a value which is a reference to a list where each element is a string
-	group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
-	group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
-	group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
-	group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
-Group1 is a reference to a hash where the following keys are defined:
-	stringParamRequiredGroup1 has a value which is a string
-	stringParamOptionalGroup1 has a value which is a string
-Group2 is a reference to a hash where the following keys are defined:
-	stringParamOptional1Group2 has a value which is a string
-	stringParamOptional2Group2 has a value which is a string
-Group3 is a reference to a hash where the following keys are defined:
-	stringParamRequiredGroup3 has a value which is a string
-	stringParamOptionalGroup3 has a value which is a string
-Group4 is a reference to a hash where the following keys are defined:
-	stringParamOptional1Group4 has a value which is a string
-	stringParamOptiona2Group4 has a value which is a string
+	groupOptional1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional1
+	groupOptional2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional2
+	groupRequired1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired1
+	groupRequired2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired2
+GroupOptional1 is a reference to a hash where the following keys are defined:
+	stringParamOptional1GroupOptional1 has a value which is a string
+	stringParamOptional2GroupOptional1 has a value which is a string
+GroupOptional2 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroupOptional2 has a value which is a string
+	stringParamOptionalGroupOptional2 has a value which is a string
+GroupRequired1 is a reference to a hash where the following keys are defined:
+	stringParamOptional1GroupRequired1 has a value which is a string
+	stringParamOptiona2GroupRequired1 has a value which is a string
+GroupRequired2 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroupRequired2 has a value which is a string
+	stringParamOptionalGroupRequired2 has a value which is a string
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -1608,7 +1608,7 @@ group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
 
 
 
-=head2 Group1
+=head2 GroupOptional1
 
 =over 4
 
@@ -1625,8 +1625,8 @@ All Configurations of Sequences
 
 <pre>
 a reference to a hash where the following keys are defined:
-stringParamRequiredGroup1 has a value which is a string
-stringParamOptionalGroup1 has a value which is a string
+stringParamOptional1GroupOptional1 has a value which is a string
+stringParamOptional2GroupOptional1 has a value which is a string
 
 </pre>
 
@@ -1635,8 +1635,8 @@ stringParamOptionalGroup1 has a value which is a string
 =begin text
 
 a reference to a hash where the following keys are defined:
-stringParamRequiredGroup1 has a value which is a string
-stringParamOptionalGroup1 has a value which is a string
+stringParamOptional1GroupOptional1 has a value which is a string
+stringParamOptional2GroupOptional1 has a value which is a string
 
 
 =end text
@@ -1645,7 +1645,7 @@ stringParamOptionalGroup1 has a value which is a string
 
 
 
-=head2 Group2
+=head2 GroupOptional2
 
 =over 4
 
@@ -1657,8 +1657,8 @@ stringParamOptionalGroup1 has a value which is a string
 
 <pre>
 a reference to a hash where the following keys are defined:
-stringParamOptional1Group2 has a value which is a string
-stringParamOptional2Group2 has a value which is a string
+stringParamRequiredGroupOptional2 has a value which is a string
+stringParamOptionalGroupOptional2 has a value which is a string
 
 </pre>
 
@@ -1667,8 +1667,8 @@ stringParamOptional2Group2 has a value which is a string
 =begin text
 
 a reference to a hash where the following keys are defined:
-stringParamOptional1Group2 has a value which is a string
-stringParamOptional2Group2 has a value which is a string
+stringParamRequiredGroupOptional2 has a value which is a string
+stringParamOptionalGroupOptional2 has a value which is a string
 
 
 =end text
@@ -1677,7 +1677,7 @@ stringParamOptional2Group2 has a value which is a string
 
 
 
-=head2 Group3
+=head2 GroupRequired1
 
 =over 4
 
@@ -1689,8 +1689,8 @@ stringParamOptional2Group2 has a value which is a string
 
 <pre>
 a reference to a hash where the following keys are defined:
-stringParamRequiredGroup3 has a value which is a string
-stringParamOptionalGroup3 has a value which is a string
+stringParamOptional1GroupRequired1 has a value which is a string
+stringParamOptiona2GroupRequired1 has a value which is a string
 
 </pre>
 
@@ -1699,8 +1699,8 @@ stringParamOptionalGroup3 has a value which is a string
 =begin text
 
 a reference to a hash where the following keys are defined:
-stringParamRequiredGroup3 has a value which is a string
-stringParamOptionalGroup3 has a value which is a string
+stringParamOptional1GroupRequired1 has a value which is a string
+stringParamOptiona2GroupRequired1 has a value which is a string
 
 
 =end text
@@ -1709,7 +1709,7 @@ stringParamOptionalGroup3 has a value which is a string
 
 
 
-=head2 Group4
+=head2 GroupRequired2
 
 =over 4
 
@@ -1721,8 +1721,8 @@ stringParamOptionalGroup3 has a value which is a string
 
 <pre>
 a reference to a hash where the following keys are defined:
-stringParamOptional1Group4 has a value which is a string
-stringParamOptiona2Group4 has a value which is a string
+stringParamRequiredGroupRequired2 has a value which is a string
+stringParamOptionalGroupRequired2 has a value which is a string
 
 </pre>
 
@@ -1731,8 +1731,8 @@ stringParamOptiona2Group4 has a value which is a string
 =begin text
 
 a reference to a hash where the following keys are defined:
-stringParamOptional1Group4 has a value which is a string
-stringParamOptiona2Group4 has a value which is a string
+stringParamRequiredGroupRequired2 has a value which is a string
+stringParamOptionalGroupRequired2 has a value which is a string
 
 
 =end text
@@ -1755,10 +1755,10 @@ stringParamOptiona2Group4 has a value which is a string
 a reference to a hash where the following keys are defined:
 stringParamRequired has a value which is a reference to a list where each element is a string
 stringParamOptional has a value which is a reference to a list where each element is a string
-group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
-group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
-group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
-group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
+groupOptional1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional1
+groupOptional2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional2
+groupRequired1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired1
+groupRequired2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired2
 
 </pre>
 
@@ -1769,10 +1769,10 @@ group4 has a value which is a reference to a list where each element is an eapea
 a reference to a hash where the following keys are defined:
 stringParamRequired has a value which is a reference to a list where each element is a string
 stringParamOptional has a value which is a reference to a list where each element is a string
-group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
-group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
-group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
-group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
+groupOptional1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional1
+groupOptional2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional2
+groupRequired1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired1
+groupRequired2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired2
 
 
 =end text

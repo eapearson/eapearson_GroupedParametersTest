@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "ff4d22b9fd6777226f0fa4c19af84155465de1c8";
+    private static final String gitCommitHash = "27b8189b923a814b2c0bb9496921db4745f44f3e";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER

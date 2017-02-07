@@ -44,54 +44,54 @@ parameters :
         ui-name: stringParamOptional
         short-hint: stringParamOptional
         long-hint: stringParamOptional
-    stringParamRequiredGroup1:
-        ui-name: stringParamRequiredGroup1
-        short-hint: stringParamRequiredGroup1
-        long-hint: stringParamRequiredGroup1
-    stringParamOptionalGroup1:
-        ui-name: stringParamOptionalGroup1
-        short-hint: stringParamOptionalGroup1
-        long-hint: stringParamOptionalGroup1
-    stringParamOptional1Group2:
-        ui-name: stringParamOptional1Group2
-        short-hint: stringParamOptional1Group2
-        long-hint: stringParamOptional1Group2
-    stringParamOptional2Group2:
-        ui-name: stringParamOptional2Group2
-        short-hint: stringParamOptional2Group2
-        long-hint: stringParamOptional2Group2
-    stringParamRequiredGroup3:
-        ui-name: stringParamRequiredGroup3
-        short-hint: stringParamRequiredGroup3
-        long-hint: stringParamRequiredGroup3
-    stringParamOptionalGroup3:
-        ui-name: stringParamOptionalGroup3
-        short-hint: stringParamOptionalGroup3
-        long-hint: stringParamOptionalGroup3
-    stringParamOptional1Group4:
-        ui-name: stringParamOptional1Group4
-        short-hint: stringParamOptional1Group4
-        long-hint: stringParamOptional1Group4
-    stringParamOptional2Group4:
-        ui-name: stringParamOptional2Group4
-        short-hint: stringParamOptional2Group4
-        long-hint: stringParamOptional2Group4
+    stringParamOptional1GroupOptional1:
+        ui-name: stringParamOptional1GroupOptional1
+        short-hint: stringParamOptional1GroupOptional1
+        long-hint: stringParamOptional1GroupOptional1
+    stringParamOptional2GroupOptional1:
+        ui-name: stringParamOptional2GroupOptional1
+        short-hint: stringParamOptional2GroupOptional1
+        long-hint: stringParamOptional2GroupOptional1        
+    stringParamRequiredGroupOptional2:
+        ui-name: stringParamRequiredGroupOptional2
+        short-hint: stringParamRequiredGroupOptional2
+        long-hint: stringParamRequiredGroupOptional2
+    stringParamOptionalGroupOptional2:
+        ui-name: stringParamOptionalGroupOptional2
+        short-hint: stringParamOptionalGroupOptional2
+        long-hint: stringParamOptionalGroupOptional2
+    stringParamOptional1GroupRequired1:
+        ui-name: stringParamOptional1GroupRequired1
+        short-hint: stringParamOptional1GroupRequired1
+        long-hint: stringParamOptional1GroupRequired1
+    stringParamOptional2GroupRequired1:
+        ui-name: stringParamOptional2GroupRequired1
+        short-hint: stringParamOptional2GroupRequired1
+        long-hint: stringParamOptional2GroupRequired1        
+    stringParamRequiredGroupRequired2:
+        ui-name: stringParamRequiredGroupRequired2
+        short-hint: stringParamRequiredGroupRequired2
+        long-hint: stringParamRequiredGroupRequired2
+    stringParamOptionalGroupRequired2:
+        ui-name: stringParamOptionalGroupRequired2
+        short-hint: stringParamOptionalGroupRequired2
+        long-hint: stringParamOptionalGroupRequired2
     
 
 parameter-groups:
-    group1:
+    groupOptional1:
         ui-name: Group 1
         short-hint: Group 1
         long-hint: Group 1
-    group2:
+    groupOptional2:
         ui-name: Group 2
         short-hint: Group 2
         long-hint: Group 2
-    group3:
+    groupRequired1:
         ui-name: Group 3
         short-hint: Group 3
         long-hint: Group 3
-    group4:
+    groupRequired2:
         ui-name: Group 4
         short-hint: Group 4
         long-hint: Group 4
