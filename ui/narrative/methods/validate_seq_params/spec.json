@@ -49,7 +49,7 @@
         {
             "id": "stringParamOptionalGroup1",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -62,7 +62,7 @@
         {
             "id": "stringParamOptional1Group2",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -74,7 +74,7 @@
         {
             "id": "stringParamOptional2Group2",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -98,7 +98,7 @@
         {
             "id": "stringParamOptionalGroup3",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -111,7 +111,7 @@
         {
             "id": "stringParamOptional1Group4",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -123,7 +123,7 @@
         {
             "id": "stringParamOptional2Group4",
             "default_values": [""],
-            "optional": true,
+            "optional": false,
             "advanced": false,
             "allow_multiple": true,
             "field_type": "text",
@@ -142,7 +142,7 @@
                 "stringParamOptionalGroup1"
             ],
             "optional": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "with_border": true
         },
         {
@@ -152,7 +152,7 @@
                 "stringParamOptional2Group2"
             ],
             "optional": false,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "with_border": true
         },
         {
@@ -162,7 +162,7 @@
                 "stringParamOptionalGroup3"
             ],
             "optional": true,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "with_border": true
         },
         {
@@ -172,7 +172,7 @@
                 "stringParamOptional2Group4"
             ],
             "optional": true,
-            "allow_multiple": false,
+            "allow_multiple": true,
             "with_border": true
         }
     ],
