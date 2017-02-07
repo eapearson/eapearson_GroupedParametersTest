@@ -134,6 +134,8 @@ module eapearson_GroupedParametersTest {
         list<string> autocompleteParam;
     } AllSequenceTypes;
 
+    /* EMPTY GROUP */
+
     typedef structure {
 
     } EmptyGroup;
@@ -141,6 +143,36 @@ module eapearson_GroupedParametersTest {
     typedef structure {
         EmptyGroup group1;
     } EmptyParamGroupInput;
+
+    /* All Configurations of Sequences */
+    typedef structure {
+        string stringParamRequiredGroup1;
+        string stringParamOptionalGroup1;
+    } Group1;
+
+    typedef structure {
+        string stringParamOptional1Group2;
+        string stringParamOptional2Group2;
+    } Group2;
+
+    typedef structure {
+        string stringParamRequiredGroup3;
+        string stringParamOptionalGroup3;
+    } Group3;
+
+    typedef structure {
+        string stringParamOptional1Group4;
+        string stringParamOptiona2Group4;
+    } Group4;
+
+    typedef structure  {
+        list<string> stringParamRequired;
+        list<string> stringParamOptional;
+        list<Group1> group1;
+        list<Group2> group2;
+        list<Group3> group3;
+        list<Group4> group4;
+    } ValidateSeqParamsInput;
 
     /* Functions */
 
@@ -160,6 +192,9 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_empty_param_group(EmptyParamGroupInput input)
+        returns (TestResults result) authentication required;
+
+    funcdef validate_seq_params(ValidateSeqParamsInput)
         returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)

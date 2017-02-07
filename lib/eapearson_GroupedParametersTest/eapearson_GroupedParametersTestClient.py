@@ -119,13 +119,38 @@ class eapearson_GroupedParametersTest(object):
     def validate_empty_param_group(self, input, context=None):
         """
         :param input: instance of type "EmptyParamGroupInput" -> structure:
-           parameter "group1" of type "EmptyGroup" -> structure:
+           parameter "group1" of type "EmptyGroup" (EMPTY GROUP) -> structure:
         :returns: instance of type "TestResults" -> structure: parameter
            "status" of String, parameter "detail" of String
         """
         return self._client.call_method(
             'eapearson_GroupedParametersTest.validate_empty_param_group',
             [input], self._service_ver, context)
+
+    def validate_seq_params(self, ValidateSeqParamsInput, context=None):
+        """
+        :param ValidateSeqParamsInput: instance of type
+           "ValidateSeqParamsInput" -> structure: parameter
+           "stringParamRequired" of list of String, parameter
+           "stringParamOptional" of list of String, parameter "group1" of
+           list of type "Group1" (All Configurations of Sequences) ->
+           structure: parameter "stringParamRequiredGroup1" of String,
+           parameter "stringParamOptionalGroup1" of String, parameter
+           "group2" of list of type "Group2" -> structure: parameter
+           "stringParamOptional1Group2" of String, parameter
+           "stringParamOptional2Group2" of String, parameter "group3" of list
+           of type "Group3" -> structure: parameter
+           "stringParamRequiredGroup3" of String, parameter
+           "stringParamOptionalGroup3" of String, parameter "group4" of list
+           of type "Group4" -> structure: parameter
+           "stringParamOptional1Group4" of String, parameter
+           "stringParamOptiona2Group4" of String
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.validate_seq_params',
+            [ValidateSeqParamsInput], self._service_ver, context)
 
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',

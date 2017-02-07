@@ -12,7 +12,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * <p>Original spec-file type: EmptyGroup</p>
- * 
+ * <pre>
+ * EMPTY GROUP
+ * </pre>
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)

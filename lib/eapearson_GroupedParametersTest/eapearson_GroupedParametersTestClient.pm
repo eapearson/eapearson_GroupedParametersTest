@@ -759,6 +759,132 @@ TestResults is a reference to a hash where the following keys are defined:
     }
 }
  
+
+
+=head2 validate_seq_params
+
+  $result = $obj->validate_seq_params($ValidateSeqParamsInput)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$ValidateSeqParamsInput is an eapearson_GroupedParametersTest.ValidateSeqParamsInput
+$result is an eapearson_GroupedParametersTest.TestResults
+ValidateSeqParamsInput is a reference to a hash where the following keys are defined:
+	stringParamRequired has a value which is a reference to a list where each element is a string
+	stringParamOptional has a value which is a reference to a list where each element is a string
+	group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
+	group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
+	group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
+	group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
+Group1 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroup1 has a value which is a string
+	stringParamOptionalGroup1 has a value which is a string
+Group2 is a reference to a hash where the following keys are defined:
+	stringParamOptional1Group2 has a value which is a string
+	stringParamOptional2Group2 has a value which is a string
+Group3 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroup3 has a value which is a string
+	stringParamOptionalGroup3 has a value which is a string
+Group4 is a reference to a hash where the following keys are defined:
+	stringParamOptional1Group4 has a value which is a string
+	stringParamOptiona2Group4 has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$ValidateSeqParamsInput is an eapearson_GroupedParametersTest.ValidateSeqParamsInput
+$result is an eapearson_GroupedParametersTest.TestResults
+ValidateSeqParamsInput is a reference to a hash where the following keys are defined:
+	stringParamRequired has a value which is a reference to a list where each element is a string
+	stringParamOptional has a value which is a reference to a list where each element is a string
+	group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
+	group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
+	group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
+	group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
+Group1 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroup1 has a value which is a string
+	stringParamOptionalGroup1 has a value which is a string
+Group2 is a reference to a hash where the following keys are defined:
+	stringParamOptional1Group2 has a value which is a string
+	stringParamOptional2Group2 has a value which is a string
+Group3 is a reference to a hash where the following keys are defined:
+	stringParamRequiredGroup3 has a value which is a string
+	stringParamOptionalGroup3 has a value which is a string
+Group4 is a reference to a hash where the following keys are defined:
+	stringParamOptional1Group4 has a value which is a string
+	stringParamOptiona2Group4 has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub validate_seq_params
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function validate_seq_params (received $n, expecting 1)");
+    }
+    {
+	my($ValidateSeqParamsInput) = @args;
+
+	my @_bad_arguments;
+        (ref($ValidateSeqParamsInput) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"ValidateSeqParamsInput\" (value was \"$ValidateSeqParamsInput\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to validate_seq_params:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'validate_seq_params');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.validate_seq_params",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'validate_seq_params',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method validate_seq_params",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'validate_seq_params',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -802,16 +928,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_empty_param_group',
+                method_name => 'validate_seq_params',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_empty_param_group",
+            error => "Error invoking method validate_seq_params",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_empty_param_group',
+            method_name => 'validate_seq_params',
         );
     }
 }
@@ -1427,6 +1553,11 @@ autocompleteParam has a value which is a reference to a list where each element 
 
 
 
+=item Description
+
+EMPTY GROUP
+
+
 =item Definition
 
 =begin html
@@ -1469,6 +1600,179 @@ group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
 
 a reference to a hash where the following keys are defined:
 group1 has a value which is an eapearson_GroupedParametersTest.EmptyGroup
+
+
+=end text
+
+=back
+
+
+
+=head2 Group1
+
+=over 4
+
+
+
+=item Description
+
+All Configurations of Sequences
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParamRequiredGroup1 has a value which is a string
+stringParamOptionalGroup1 has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParamRequiredGroup1 has a value which is a string
+stringParamOptionalGroup1 has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 Group2
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParamOptional1Group2 has a value which is a string
+stringParamOptional2Group2 has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParamOptional1Group2 has a value which is a string
+stringParamOptional2Group2 has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 Group3
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParamRequiredGroup3 has a value which is a string
+stringParamOptionalGroup3 has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParamRequiredGroup3 has a value which is a string
+stringParamOptionalGroup3 has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 Group4
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParamOptional1Group4 has a value which is a string
+stringParamOptiona2Group4 has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParamOptional1Group4 has a value which is a string
+stringParamOptiona2Group4 has a value which is a string
+
+
+=end text
+
+=back
+
+
+
+=head2 ValidateSeqParamsInput
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+stringParamRequired has a value which is a reference to a list where each element is a string
+stringParamOptional has a value which is a reference to a list where each element is a string
+group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
+group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
+group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
+group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+stringParamRequired has a value which is a reference to a list where each element is a string
+stringParamOptional has a value which is a reference to a list where each element is a string
+group1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group1
+group2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group2
+group3 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group3
+group4 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.Group4
 
 
 =end text

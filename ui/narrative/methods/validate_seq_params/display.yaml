@@ -1,0 +1,100 @@
+#
+# define display information
+#
+name: Validate Parameter Types in Sequences
+
+tooltip: |
+    Validates sequences of parameters
+
+description: |
+    Validates and tests sequences of parameters in various combinations. Rather than cover
+    all parameter types, this is a test of the various configurations of parameter
+    sequences, including - required single, optional single, required group with required
+    params, required group with all optional params, optional group with required
+    params, optional group with optional params.
+
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    stringParamRequired:
+        ui-name: stringParamRequired
+        short-hint: stringParamRequired
+        long-hint: stringParamRequired
+    stringParamOptional:
+        ui-name: stringParamOptional
+        short-hint: stringParamOptional
+        long-hint: stringParamOptional
+    stringParamRequiredGroup1:
+        ui-name: stringParamRequiredGroup1
+        short-hint: stringParamRequiredGroup1
+        long-hint: stringParamRequiredGroup1
+    stringParamOptionalGroup1:
+        ui-name: stringParamOptionalGroup1
+        short-hint: stringParamOptionalGroup1
+        long-hint: stringParamOptionalGroup1
+    stringParamOptional1Group2:
+        ui-name: stringParamOptional1Group2
+        short-hint: stringParamOptional1Group2
+        long-hint: stringParamOptional1Group2
+    stringParamOptional2Group2:
+        ui-name: stringParamOptional2Group2
+        short-hint: stringParamOptional2Group2
+        long-hint: stringParamOptional2Group2
+    stringParamRequiredGroup3:
+        ui-name: stringParamRequiredGroup3
+        short-hint: stringParamRequiredGroup3
+        long-hint: stringParamRequiredGroup3
+    stringParamOptionalGroup3:
+        ui-name: stringParamOptionalGroup3
+        short-hint: stringParamOptionalGroup3
+        long-hint: stringParamOptionalGroup3
+    stringParamOptional1Group4:
+        ui-name: stringParamOptional1Group4
+        short-hint: stringParamOptional1Group4
+        long-hint: stringParamOptional1Group4
+    stringParamOptional2Group4:
+        ui-name: stringParamOptional2Group4
+        short-hint: stringParamOptional2Group4
+        long-hint: stringParamOptional2Group4
+    
+
+parameter-groups:
+    group1:
+        ui-name: Group 1
+        short-hint: Group 1
+        long-hint: Group 1
+    group2:
+        ui-name: Group 2
+        short-hint: Group 2
+        long-hint: Group 2
+    group3:
+        ui-name: Group 3
+        short-hint: Group 3
+        long-hint: Group 3
+    group4:
+        ui-name: Group 4
+        short-hint: Group 4
+        long-hint: Group 4
+
+description : |
+    <p>Excercises all parameter types in one app</p>

@@ -25,7 +25,9 @@ public class EmptyParamGroupInput {
 
     /**
      * <p>Original spec-file type: EmptyGroup</p>
-     * 
+     * <pre>
+     * EMPTY GROUP
+     * </pre>
      * 
      */
     @JsonProperty("group1")
@@ -34,7 +36,9 @@ public class EmptyParamGroupInput {
 
     /**
      * <p>Original spec-file type: EmptyGroup</p>
-     * 
+     * <pre>
+     * EMPTY GROUP
+     * </pre>
      * 
      */
     @JsonProperty("group1")
@@ -44,7 +48,9 @@ public class EmptyParamGroupInput {
 
     /**
      * <p>Original spec-file type: EmptyGroup</p>
-     * 
+     * <pre>
+     * EMPTY GROUP
+     * </pre>
      * 
      */
     @JsonProperty("group1")

@@ -1,0 +1,224 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "eapearson"
+    ],
+    "contact": "help@kbase.us",
+    "categories": ["active"],
+    "app_type": "app",
+    "widgets": {
+        "input": null,
+        "output": "no-display"
+    },
+    "parameters": [{
+            "id": "stringParamOptional",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamRequired",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamRequiredGroup1",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptionalGroup1",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+
+        {
+            "id": "stringParamOptional1Group2",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptional2Group2",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamRequiredGroup3",
+            "default_values": [""],
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptionalGroup3",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+
+        {
+            "id": "stringParamOptional1Group4",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        },
+        {
+            "id": "stringParamOptional2Group4",
+            "default_values": [""],
+            "optional": true,
+            "advanced": false,
+            "allow_multiple": true,
+            "field_type": "text",
+            "text_options": {
+                "min_length": 1,
+                "max_length": 100
+            }
+        }
+
+    ],
+    "parameter-groups": [
+        {
+            "id": "group1",
+            "parameters": [
+                "stringParamRequiredGroup1",
+                "stringParamOptionalGroup1"
+            ],
+            "optional": false,
+            "allow_multiple": false,
+            "with_border": true
+        },
+        {
+            "id": "group2",
+            "parameters": [
+                "stringParamOptional1Group2",
+                "stringParamOptional2Group2"
+            ],
+            "optional": false,
+            "allow_multiple": false,
+            "with_border": true
+        },
+        {
+            "id": "group3",
+            "parameters": [
+                "stringParamRequiredGroup3",
+                "stringParamOptionalGroup3"
+            ],
+            "optional": true,
+            "allow_multiple": false,
+            "with_border": true
+        },
+        {
+            "id": "group4",
+            "parameters": [
+                "stringParamOptional1Group4",
+                "stringParamOptional2Group4"
+            ],
+            "optional": true,
+            "allow_multiple": false,
+            "with_border": true
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "eapearson_GroupedParametersTest",
+            "method": "validate_seq_params",
+            "input_mapping": [{
+                    "input_parameter": "stringParamOptional",
+                    "target_property": "stringParamOptional",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "stringParamRequired",
+                    "target_property": "stringParamRequired",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "group1",
+                    "target_property": "group1",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "group2",
+                    "target_property": "group2",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "group3",
+                    "target_property": "group3",
+                    "target_argument_position": 0
+                },
+                {
+                    "input_parameter": "group4",
+                    "target_property": "group4",
+                    "target_argument_position": 0
+                }
+            ],
+            "output_mapping": [{
+                "service_method_output_path": [
+                    0
+                ],
+                "target_property": "results"
+            }]
+        }
+    },
+    "job_id_output_field": "docker"
+}
