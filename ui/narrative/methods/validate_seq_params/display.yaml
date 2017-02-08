@@ -80,21 +80,21 @@ parameters :
 
 parameter-groups:
     groupOptional1:
-        ui-name: Group 1
-        short-hint: Group 1
-        long-hint: Group 1
+        ui-name: Group Optional 1
+        short-hint: Group Optional 1
+        long-hint: Group Optional 1
     groupOptional2:
-        ui-name: Group 2
-        short-hint: Group 2
-        long-hint: Group 2
+        ui-name: Group Optional 2
+        short-hint: Group Optional 2
+        long-hint: Group Optional 2
     groupRequired1:
-        ui-name: Group 3
-        short-hint: Group 3
-        long-hint: Group 3
+        ui-name: Group Required 1
+        short-hint: Group Required 1
+        long-hint: Group Required 1
     groupRequired2:
-        ui-name: Group 4
-        short-hint: Group 4
-        long-hint: Group 4
+        ui-name: Group Required 2
+        short-hint: Group Required 2
+        long-hint: Group Required 2
 
 description : |
     <p>Excercises all parameter types in one app</p>
