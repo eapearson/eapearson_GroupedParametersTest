@@ -18,7 +18,7 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -29,7 +29,7 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
          {
@@ -40,7 +40,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -51,7 +51,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -62,7 +62,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
          {
@@ -73,7 +73,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -84,7 +84,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -95,7 +95,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -106,7 +106,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         },
         {
@@ -117,7 +117,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": "^(?!.*(?:invalid))"
+                "regex_constraint": ["^(?!.*(?:invalid))"]
             }
         }
     ],
