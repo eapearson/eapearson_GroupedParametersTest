@@ -18,8 +18,7 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -30,8 +29,7 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
          {
@@ -42,8 +40,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -54,8 +51,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -66,8 +62,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
          {
@@ -78,8 +73,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -90,8 +84,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -102,8 +95,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -114,8 +106,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         },
         {
@@ -126,8 +117,7 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "min_length": 1,
-                "max_length": 4
+                "regex_constraint": "^(?!.*(?:invalid))"
             }
         }
     ],
