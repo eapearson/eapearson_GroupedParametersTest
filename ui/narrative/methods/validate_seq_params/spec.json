@@ -18,7 +18,13 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -29,7 +35,13 @@
             "allow_multiple": true,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
          {
@@ -40,7 +52,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -51,7 +69,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -62,7 +86,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
          {
@@ -73,7 +103,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -84,7 +120,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -95,7 +137,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -106,7 +154,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         },
         {
@@ -117,7 +171,13 @@
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
-                "regex_constraint": ["^(?!.*(?:invalid))"]
+                 "regex_constraint": [
+                    {
+                        "regex": "invalid",
+                        "error_text": "This text is invalid",
+                        "match": 0
+                    }
+                ]
             }
         }
     ],
