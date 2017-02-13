@@ -153,6 +153,18 @@ class eapearson_GroupedParametersTest(object):
             'eapearson_GroupedParametersTest.validate_seq_params',
             [ValidateSeqParamsInput], self._service_ver, context)
 
+    def generate_error(self, GenerateErrorParamsInput, context=None):
+        """
+        :param GenerateErrorParamsInput: instance of type
+           "GenerateErrorParamsInput" -> structure: parameter "field1" of
+           String
+        :returns: instance of type "TestResults" -> structure: parameter
+           "status" of String, parameter "detail" of String
+        """
+        return self._client.call_method(
+            'eapearson_GroupedParametersTest.generate_error',
+            [GenerateErrorParamsInput], self._service_ver, context)
+
     def status(self, context=None):
         return self._client.call_method('eapearson_GroupedParametersTest.status',
                                         [], self._service_ver, context)

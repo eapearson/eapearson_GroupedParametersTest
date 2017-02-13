@@ -885,6 +885,98 @@ TestResults is a reference to a hash where the following keys are defined:
     }
 }
  
+
+
+=head2 generate_error
+
+  $result = $obj->generate_error($GenerateErrorParamsInput)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$GenerateErrorParamsInput is an eapearson_GroupedParametersTest.GenerateErrorParamsInput
+$result is an eapearson_GroupedParametersTest.TestResults
+GenerateErrorParamsInput is a reference to a hash where the following keys are defined:
+	field1 has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$GenerateErrorParamsInput is an eapearson_GroupedParametersTest.GenerateErrorParamsInput
+$result is an eapearson_GroupedParametersTest.TestResults
+GenerateErrorParamsInput is a reference to a hash where the following keys are defined:
+	field1 has a value which is a string
+TestResults is a reference to a hash where the following keys are defined:
+	status has a value which is a string
+	detail has a value which is a string
+
+
+=end text
+
+=item Description
+
+
+
+=back
+
+=cut
+
+ sub generate_error
+{
+    my($self, @args) = @_;
+
+# Authentication: required
+
+    if ((my $n = @args) != 1)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function generate_error (received $n, expecting 1)");
+    }
+    {
+	my($GenerateErrorParamsInput) = @args;
+
+	my @_bad_arguments;
+        (ref($GenerateErrorParamsInput) eq 'HASH') or push(@_bad_arguments, "Invalid type for argument 1 \"GenerateErrorParamsInput\" (value was \"$GenerateErrorParamsInput\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to generate_error:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'generate_error');
+	}
+    }
+
+    my $url = $self->{url};
+    my $result = $self->{client}->call($url, $self->{headers}, {
+	    method => "eapearson_GroupedParametersTest.generate_error",
+	    params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'generate_error',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method generate_error",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'generate_error',
+				       );
+    }
+}
+ 
   
 sub status
 {
@@ -928,16 +1020,16 @@ sub version {
             Bio::KBase::Exceptions::JSONRPC->throw(
                 error => $result->error_message,
                 code => $result->content->{code},
-                method_name => 'validate_seq_params',
+                method_name => 'generate_error',
             );
         } else {
             return wantarray ? @{$result->result} : $result->result->[0];
         }
     } else {
         Bio::KBase::Exceptions::HTTP->throw(
-            error => "Error invoking method validate_seq_params",
+            error => "Error invoking method generate_error",
             status_line => $self->{client}->status_line,
-            method_name => 'validate_seq_params',
+            method_name => 'generate_error',
         );
     }
 }
@@ -1773,6 +1865,36 @@ groupOptional1 has a value which is a reference to a list where each element is 
 groupOptional2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupOptional2
 groupRequired1 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired1
 groupRequired2 has a value which is a reference to a list where each element is an eapearson_GroupedParametersTest.GroupRequired2
+
+
+=end text
+
+=back
+
+
+
+=head2 GenerateErrorParamsInput
+
+=over 4
+
+
+
+=item Definition
+
+=begin html
+
+<pre>
+a reference to a hash where the following keys are defined:
+field1 has a value which is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+a reference to a hash where the following keys are defined:
+field1 has a value which is a string
 
 
 =end text

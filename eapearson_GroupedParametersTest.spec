@@ -175,6 +175,10 @@ module eapearson_GroupedParametersTest {
         list<GroupRequired2> groupRequired2;
     } ValidateSeqParamsInput;
 
+    typedef structure {
+        string field1;
+    } GenerateErrorParamsInput;
+
     /* Functions */
 
     funcdef validate_contact(Contact contact)
@@ -196,6 +200,9 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_seq_params(ValidateSeqParamsInput)
+        returns (TestResults result) authentication required;
+
+    funcdef generate_error(GenerateErrorParamsInput)
         returns (TestResults result) authentication required;
 
     /*funcdef validate_checklist(CarChecklist checklist)

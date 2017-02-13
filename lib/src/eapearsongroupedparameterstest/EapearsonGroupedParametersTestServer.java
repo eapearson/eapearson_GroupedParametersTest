@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "f18ca6ec90d9a67a71cfe0022c72d91eb9a4a3ad";
+    private static final String gitCommitHash = "8f3c4c61265348344ace97eacb7318b07918605f";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -142,6 +142,31 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         TestResults returnVal = null;
         //BEGIN validate_seq_params
         //END validate_seq_params
+        return returnVal;
+    }
+
+    /**
+     * <p>Original spec-file function name: generate_error</p>
+     * <pre>
+     * </pre>
+     * @param   arg1   instance of type {@link eapearsongroupedparameterstest.GenerateErrorParamsInput GenerateErrorParamsInput}
+     * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
+     */
+    @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.generate_error", async=true)
+    public TestResults generateError(GenerateErrorParamsInput arg1, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+        TestResults returnVal = null;
+        //BEGIN generate_error
+        if (arg1.get("field1") == "internal") {
+            // do a divide by zero
+            int x = 5/0;
+        } else if (arg1.get("field1") == "validation") {
+            // simulate a validation error
+            throw new Exception("That was exceptional!");
+        } else if (arg.get("field1") == "none") {
+            returnValue.put("status", "OK");
+            returnValue.put("message", "Geez, no error here.");
+        }
+        //END generate_error
         return returnVal;
     }
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.status")
