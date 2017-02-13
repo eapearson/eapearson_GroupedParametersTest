@@ -1,10 +1,10 @@
 #
 # define display information
 #
-name: Validate a Bug Report
+name: Generate an App Error
 
 tooltip: |
-    Validates a Bug Report
+    Generate an App Error
 
 screenshots: []
 

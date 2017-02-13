@@ -17,8 +17,22 @@
             "optional": false,
             "advanced": false, 
             "allow_multiple": false,
-            "field_type": "text",
-            "text_options": {
+            "field_type": "dropdown",
+            "dropdown_options": {
+                "options": [
+                    {
+                        "display": "Runtime",
+                        "value": "runtime"
+                    },
+                    {
+                        "display": "Validation",
+                        "value": "validation"
+                    },
+                    {
+                        "display": "None",
+                        "value": "none"
+                    }
+                ]
             }
         }
     ],
