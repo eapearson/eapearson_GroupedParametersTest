@@ -29,10 +29,10 @@ suggestions:
 # Configure the display and description of parameters
 #
 parameters :
-    field1 :
-        ui-name : Field 1
-        short-hint : Field 1
-        long-hint  : Field 1    
+    error_type :
+        ui-name : Error Type
+        short-hint : Error Type
+        long-hint  : Error Type 
 
 
 

@@ -176,7 +176,7 @@ module eapearson_GroupedParametersTest {
     } ValidateSeqParamsInput;
 
     typedef structure {
-        string field1;
+        string errorType;
     } GenerateErrorParamsInput;
 
     /* Functions */

@@ -12,7 +12,7 @@
     },
     "parameters": [ 
          {
-            "id": "field1",
+            "id": "error_type",
             "default_values": [""],
             "optional": false,
             "advanced": false, 
@@ -43,8 +43,8 @@
             "method": "generate_error",
             "input_mapping": [
                 {
-                    "input_parameter": "field1",
-                    "target_property": "field1",
+                    "input_parameter": "error_type",
+                    "target_property": "error_type",
                     "target_argument_position": 0
                 }
             ],

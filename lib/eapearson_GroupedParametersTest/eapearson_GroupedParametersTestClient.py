@@ -156,7 +156,7 @@ class eapearson_GroupedParametersTest(object):
     def generate_error(self, GenerateErrorParamsInput, context=None):
         """
         :param GenerateErrorParamsInput: instance of type
-           "GenerateErrorParamsInput" -> structure: parameter "field1" of
+           "GenerateErrorParamsInput" -> structure: parameter "errorType" of
            String
         :returns: instance of type "TestResults" -> structure: parameter
            "status" of String, parameter "detail" of String

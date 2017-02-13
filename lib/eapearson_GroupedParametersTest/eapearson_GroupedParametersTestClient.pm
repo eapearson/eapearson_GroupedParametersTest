@@ -901,7 +901,7 @@ TestResults is a reference to a hash where the following keys are defined:
 $GenerateErrorParamsInput is an eapearson_GroupedParametersTest.GenerateErrorParamsInput
 $result is an eapearson_GroupedParametersTest.TestResults
 GenerateErrorParamsInput is a reference to a hash where the following keys are defined:
-	field1 has a value which is a string
+	errorType has a value which is a string
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -915,7 +915,7 @@ TestResults is a reference to a hash where the following keys are defined:
 $GenerateErrorParamsInput is an eapearson_GroupedParametersTest.GenerateErrorParamsInput
 $result is an eapearson_GroupedParametersTest.TestResults
 GenerateErrorParamsInput is a reference to a hash where the following keys are defined:
-	field1 has a value which is a string
+	errorType has a value which is a string
 TestResults is a reference to a hash where the following keys are defined:
 	status has a value which is a string
 	detail has a value which is a string
@@ -1885,7 +1885,7 @@ groupRequired2 has a value which is a reference to a list where each element is 
 
 <pre>
 a reference to a hash where the following keys are defined:
-field1 has a value which is a string
+errorType has a value which is a string
 
 </pre>
 
@@ -1894,7 +1894,7 @@ field1 has a value which is a string
 =begin text
 
 a reference to a hash where the following keys are defined:
-field1 has a value which is a string
+errorType has a value which is a string
 
 
 =end text

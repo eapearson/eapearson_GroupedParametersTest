@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.1";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "8a7f7b4a3e2f0c282eb28a4bc994cbc1e3cdc208";
+    private static final String gitCommitHash = "298ef1b49863517b9c51b8d22c28dcd50f55bc63";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -159,13 +159,13 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
         returnVal = new TestResults();
         returnVal.setStatus("Really?");
         returnVal.setDetail(arg1.getField1());
-        if (arg1.getField1() == "runtime") {
+        if (arg1.getErrorType().equals("runtime")) {
             // do a divide by zero
             int x = 5/0;
-        } else if (arg1.getField1() == "validation") {
+        } else if (arg1.getErrorType().equals("validation")) {
             // simulate a validation error
             throw new Exception("That was exceptional!");
-        } else if (arg1.getField1() == "none") {
+        } else if (arg1.getErrorType().equals("none")) {
             returnVal.setStatus("OK");
             returnVal.setDetail("Geez, no error here.");
         }
