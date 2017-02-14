@@ -166,7 +166,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
             int x = 5/0;
         } else if (arg1.getErrorType().equals("runtime-null-pointer")) {
             // do a divide by zero
-            TestResults y;
+            TestResults y = null;
             y.setStatus("I'm a null pointer!");
         } else if (arg1.getErrorType().equals("validation")) {
             // simulate a validation error
