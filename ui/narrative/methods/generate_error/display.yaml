@@ -37,4 +37,4 @@ parameters :
 
 
 description : |
-    <p>Method to accept and validate a bug entry</p>
+    <p>An app to create various types of errors in an app, in order to test how the front end responds.</p>

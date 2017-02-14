@@ -21,8 +21,12 @@
             "dropdown_options": {
                 "options": [
                     {
-                        "display": "Runtime",
-                        "value": "runtime"
+                        "display": "Runtime - divide by zero",
+                        "value": "runtime-divide-by-zero"
+                    },
+                    {
+                        "display": "Runtime - null pointer",
+                        "value": "runtime-null-pointer"
                     },
                     {
                         "display": "Validation",
