@@ -292,7 +292,7 @@ TestResults is a reference to a hash where the following keys are defined:
 {
     my($self, @args) = @_;
 
-# Authentication: required
+# Authentication: none
 
     if ((my $n = @args) != 1)
     {

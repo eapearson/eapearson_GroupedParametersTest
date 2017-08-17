@@ -193,7 +193,7 @@ public class EapearsonGroupedParametersTestClient {
         List<Object> args = new ArrayList<Object>();
         args.add(bug);
         TypeReference<List<TestResults>> retType = new TypeReference<List<TestResults>>() {};
-        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, true, jsonRpcContext, this.serviceVersion);
+        List<TestResults> res = caller.jsonrpcCall("eapearson_GroupedParametersTest.validate_bug", args, retType, true, false, jsonRpcContext, this.serviceVersion);
         return res.get(0);
     }
 

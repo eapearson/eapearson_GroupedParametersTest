@@ -22,7 +22,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
     private static final String version = "0.0.2";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "adc4195134b2ef8054922ed0d1864bd07df524a0";
+    private static final String gitCommitHash = "210d0d56cf00078d273630172eb605c053e4f2f4";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
@@ -60,7 +60,7 @@ public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
      * @return   parameter "result" of type {@link eapearsongroupedparameterstest.TestResults TestResults}
      */
     @JsonServerMethod(rpc = "eapearson_GroupedParametersTest.validate_bug", async=true)
-    public TestResults validateBug(Bug bug, AuthToken authPart, RpcContext jsonRpcContext) throws Exception {
+    public TestResults validateBug(Bug bug, RpcContext jsonRpcContext) throws Exception {
         TestResults returnVal = null;
         //BEGIN validate_bug
           returnVal = new TestResults()

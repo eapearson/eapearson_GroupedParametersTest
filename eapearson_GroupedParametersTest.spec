@@ -185,7 +185,7 @@ module eapearson_GroupedParametersTest {
         returns (TestResults result) authentication required;
 
     funcdef validate_bug(Bug bug)
-        returns (TestResults result) authentication required;
+        returns (TestResults result);
 
     funcdef validate_measurement(Measurement)
         returns (TestResults result) authentication required;
