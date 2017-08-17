@@ -1,5 +1,5 @@
 {
-    "ver": "0.0.1",
+    "ver": "0.0.2",
     "authors": [
         "eapearson"
     ],
@@ -10,8 +10,7 @@
         "input": null,
         "output": null
     },
-    "parameters": [ 
-        {
+    "parameters": [{
             "id": "title",
             "default_values": [""],
             "field_type": "text",
@@ -27,7 +26,7 @@
                 "n_rows": 10
             }
         },
-        {   
+        {
             "id": "effort",
             "default_values": [""],
             "field_type": "int",
@@ -41,8 +40,7 @@
             "default_values": [""],
             "field_type": "dropdown",
             "text_options": {
-                "options": [
-                    {
+                "options": [{
                         "display": "Easy",
                         "value": "easy"
                     },
@@ -64,15 +62,13 @@
             "id": "time_started",
             "default_values": [""],
             "field_type": "text",
-            "text_options": {
-            }
+            "text_options": {}
         },
         {
             "id": "time_spent",
             "default_values": [""],
             "field_type": "text",
-            "text_options": {
-            }
+            "text_options": {}
         },
         {
             "id": "comments",
@@ -84,25 +80,22 @@
             }
         }
     ],
-    "parameter-groups": [
-        {
-            "id": "log_entries",
-            "parameters": [
-                "time_started", "time_spent", "comments"
-            ],
-            "optional": true,
-            "allow_multiple": true,
-            "mapping": {},
-            "with_border": true
-        }
-    ],
+    "parameter-groups": [{
+        "id": "log_entries",
+        "parameters": [
+            "time_started", "time_spent", "comments"
+        ],
+        "optional": true,
+        "allow_multiple": true,
+        "mapping": {},
+        "with_border": true
+    }],
     "behavior": {
         "service-mapping": {
             "url": "",
             "name": "eapearson_GroupedParametersTest",
             "method": "validate_params",
-            "input_mapping": [
-                {
+            "input_mapping": [{
                     "input_parameter": "title",
                     "target_property": "data/title",
                     "target_argument_position": 0
@@ -132,8 +125,7 @@
                     "target_argument_position": 0
                 }
             ],
-            "output_mapping": [
-                {
+            "output_mapping": [{
                     "service_method_output_path": [0],
                     "target_property": "results"
                 },
