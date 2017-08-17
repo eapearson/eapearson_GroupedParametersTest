@@ -8,14 +8,13 @@
     "app_type": "app",
     "widgets": {
         "input": null,
-        "output": "no-display"
+        "output": null
     },
-    "parameters": [ 
-        {
+    "parameters": [{
             "id": "title",
             "default_values": [""],
             "optional": false,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
@@ -26,7 +25,7 @@
             "id": "description",
             "default_values": [""],
             "optional": false,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "textarea",
             "text_options": {
@@ -34,11 +33,11 @@
                 "max_length": 1000
             }
         },
-        {   
+        {
             "id": "severity",
             "default_values": [""],
             "optional": true,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
@@ -51,12 +50,11 @@
             "id": "effort",
             "default_values": [""],
             "optional": true,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "dropdown",
             "dropdown_options": {
-                "options": [
-                    {
+                "options": [{
                         "display": "Easy",
                         "value": "easy"
                     },
@@ -76,7 +74,7 @@
             "id": "time_started",
             "default_values": [""],
             "optional": false,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
@@ -87,7 +85,7 @@
             "id": "time_spent",
             "default_values": [""],
             "optional": false,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "text",
             "text_options": {
@@ -100,12 +98,11 @@
             "id": "task_type",
             "default_values": [""],
             "optional": false,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "dropdown",
             "dropdown_options": {
-                "options": [
-                    {
+                "options": [{
                         "display": "Design",
                         "value": "design"
                     },
@@ -132,7 +129,7 @@
             "id": "comments",
             "default_values": [""],
             "optional": true,
-            "advanced": false, 
+            "advanced": false,
             "allow_multiple": false,
             "field_type": "textarea",
             "text_options": {
@@ -141,25 +138,22 @@
             }
         }
     ],
-    "parameter-groups": [
-        {
-            "id": "log_entries",
-            "parameters": [
-                "task_type", "time_started", "time_spent", "comments"
-            ],
-            "optional": true,
-            "allow_multiple": true,
-            "mapping": {},
-            "with_border": true
-        }
-    ],
+    "parameter-groups": [{
+        "id": "log_entries",
+        "parameters": [
+            "task_type", "time_started", "time_spent", "comments"
+        ],
+        "optional": true,
+        "allow_multiple": true,
+        "mapping": {},
+        "with_border": true
+    }],
     "behavior": {
         "service-mapping": {
             "url": "",
             "name": "eapearson_GroupedParametersTest",
             "method": "validate_bug",
-            "input_mapping": [
-                {
+            "input_mapping": [{
                     "input_parameter": "title",
                     "target_property": "title",
                     "target_argument_position": 0
@@ -185,14 +179,12 @@
                     "target_argument_position": 0
                 }
             ],
-            "output_mapping": [
-                {
-                    "service_method_output_path": [
-                        0
-                    ],
-                    "target_property": "results"
-                }
-            ]
+            "output_mapping": [{
+                "service_method_output_path": [
+                    0
+                ],
+                "target_property": "results"
+            }]
         }
     },
     "job_id_output_field": "docker"
