@@ -20,9 +20,9 @@ import us.kbase.common.service.RpcContext;
  */
 public class EapearsonGroupedParametersTestServer extends JsonServerServlet {
     private static final long serialVersionUID = 1L;
-    private static final String version = "0.0.1";
+    private static final String version = "0.0.2";
     private static final String gitUrl = "ssh://git@github.com/eapearson/eapearson_GroupedParametersTest";
-    private static final String gitCommitHash = "e307d50d71d20a524a0df96de77f2ac730c9bfc1";
+    private static final String gitCommitHash = "2920f6bf06905250fadee91328f903cf5a02b767";
 
     //BEGIN_CLASS_HEADER
     //END_CLASS_HEADER
